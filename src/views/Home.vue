@@ -634,6 +634,6 @@ export default {
 }
 
 @media only screen and (max-width: 900px) {
-
+  
 }
 </style>

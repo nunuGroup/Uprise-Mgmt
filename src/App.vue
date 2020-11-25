@@ -322,5 +322,46 @@ p {
   .g-cursor {
     display: none !important;
   }
+
+  .swoop {
+      transform: translate(-56px, -62px) scale(0.2) !important;
+      //background: green !important;
+      transition: 1s cubic-bezier(0.65, 0, 0.35, 1);
+   }
+
+   .soc-container {
+     transform: scale(0.7);
+     top: 30px !important;
+     right: 6px !important;
+     display: none !important;
+   }
+
+   .landing-container {
+     width: 300px !important;
+     height: 80px !important;
+   }
+
+   .fp-tooltip {
+     display: none !important;
+   }
+
+   #fp-nav {
+     position: absolute;
+     margin: 0px !important;
+     transform: rotate(270deg);
+     top: -50px !important;
+     left: 180px !important;
+     width: 12px;
+
+     li {
+       margin-bottom: 18px !important;
+
+       a.active {
+         width: 8px !important;
+         height: 8px !important;
+         margin: 0px 0 0 0px !important;
+       }
+     }
+   }
 }
 </style>
