@@ -7,10 +7,10 @@ export default {
       waveLeft: true,
       options: {
         normalScrollElements: '.test-container, .modal-active, .modal-inactive, .more-work-grid, .more-work-container, .modal-images',
-        controlArrows: true,
         loopHorizontal: false,
         scrollingSpeed: 1000,
-        slidesNavigation: true,
+        slidesNavigation: false,
+        controlArrows: false,
         navigation: true,
         fadingEffect: true,
         navigationPosition: 'left',
@@ -120,6 +120,12 @@ export default {
     },
     goDown() {
       this.$refs.fullpage.api.moveSectionDown()
+    },
+    moveRight() {
+      this.$refs.fullpage.api.moveSlideRight();
+    },
+    moveLeft() {
+      this.$refs.fullpage.api.moveSlideLeft();
     }
   }
 }
@@ -190,26 +196,25 @@ export default {
         <div style="background: purple" class="slide">
           <div class="page-container">
             slide1
+            <div class="bottom-actions">
+              <div @click="moveRight()" class="hoverable nav-button next">Next</div>
+            </div>
           </div>        
         </div>
         <div style="background: darkblue" class="slide">
           <div class="page-container">
             slide2
-          </div>        
-        </div>
-        <div style="background: red" class="slide">
-          <div class="page-container">
-            <div class="page-container">
-              slide3
+            <div class="bottom-actions">
+              <div @click="moveLeft()" class="hoverable nav-button prev">Prev</div>
             </div>
-          </div>
+          </div>        
         </div>
       </section>
 
       <!-- Section 6 -->
-      <section style="background: brown" class="section">
+      <section style="background: pink" class="section">
         <div class="page-container">
-          
+          sec6
         </div>
       </section>
 
@@ -218,7 +223,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/variables';
+@import '../assets/styles/global';
 
 .page-container {
   height: 100vh;
@@ -228,6 +233,34 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bottom-actions {
+  position: absolute;
+  bottom: 0px;
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  //background: gray;
+  color: white;
+  height: 100px;
+  width: 100vw;
+
+  .nav-button {
+    background: black;
+    height: 40px;
+    width: max-content;
+    padding: 6px 24px;
+    margin-right: 36px;
+    line-height: 40px;
+    border-radius: $rad;
+    transition: $quick;
+
+    &:hover {
+      transform: $shrink;
+    }
+  }
 }
 
 .arrows {

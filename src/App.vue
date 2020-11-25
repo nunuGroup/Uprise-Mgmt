@@ -115,7 +115,7 @@ html {
 }
 
 .fp-slideNav {
-  margin-bottom: 400px !important;
+  //margin-bottom: 400px !important;
 
   ul li a span {
     background: red !important;
@@ -123,17 +123,17 @@ html {
 }
 
 #fp-nav {
-  
-  margin-left: 48px;
+  top: 450px !important;
+  margin-left: 45px;
 
   li {
     margin-bottom: 36px !important;
   }
 
   .fp-tooltip {
-    font-size: 18px !important;
+    font-size: 14px !important;
     padding-left: 32px;
-    line-height: 38px;
+    line-height: 22px;
   }
 
   .active span {
@@ -227,6 +227,8 @@ p {
 // --------- cursor stuff ----------
 
 .g-cursor {
+  position: absolute;
+
     &_hide {
       opacity: 0;
       width: 60px;
