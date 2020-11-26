@@ -1,8 +1,15 @@
 <script>
+import firebase from 'firebase';
+import EditableText from '@/components/EditableText.vue'
+
 export default {
   name: 'Home',
+  components: {
+    EditableText
+  },
   data() {
     return {
+      name: null,
       waveOffset: "120vw",
       waveLeft: true,
       options: {
@@ -42,16 +49,22 @@ export default {
   props: {
     dataRef: Object
   },
-  components: {
-
-  },
   created() {
 
   },
   mounted() {
     this.hideNav = false; //hide nav on landing page?
+    this.fetchText();
   },
   methods: {
+    fetchText() {
+      firebase.firestore().collection("test-data").where("age","==",23).get().then((docs) => {
+        docs.forEach((doc) => {
+          console.log(doc.data());
+          this.name = doc.data().name;
+        });
+      });
+    },
     handleLeave(origin, destination, direction) {
       console.log('origin: ', origin);
       console.log('destination: ', destination);
@@ -173,7 +186,7 @@ export default {
       <!-- Section 2 -->
       <section style="background: green" class="section">
         <div class="page-container">
-          <p>sample content 1</p>
+          <EditableText rel="section2text" />
         </div>
       </section>
 
