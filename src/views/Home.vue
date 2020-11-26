@@ -164,7 +164,7 @@ export default {
     <full-page ref="fullpage" :options="options" id="fullpage">
 
       <!-- Section 1 (landing page) -->
-      <section style="background: blue" class="section landing">
+      <section style="background: #3d72b4" class="section landing">
         <div class="landing-container">
           <div @click="goDown" class="arrows hoverable"></div>
         </div>
@@ -173,21 +173,21 @@ export default {
       <!-- Section 2 -->
       <section style="background: green" class="section">
         <div class="page-container">
-          
+          <p>sample content 1</p>
         </div>
       </section>
 
       <!-- Section 3 -->
       <section style="background: orange" class="section">
         <div class="page-container">
-          
+          <p>sample content 2</p>
         </div>
       </section>
 
       <!-- Section 4 -->
       <section style="background: maroon" class="section">
         <div class="page-container">
-          
+          <p>sample content 3</p>
         </div>
       </section>
 
@@ -195,7 +195,7 @@ export default {
       <section class="section">
         <div style="background: purple" class="slide">
           <div class="page-container">
-            slide1
+            slide example 1
             <div class="bottom-actions">
               <div @click="moveRight()" class="hoverable nav-button next">Next</div>
             </div>
@@ -203,7 +203,7 @@ export default {
         </div>
         <div style="background: darkblue" class="slide">
           <div class="page-container">
-            slide2
+            slide example 2
             <div class="bottom-actions">
               <div @click="moveLeft()" class="hoverable nav-button prev">Prev</div>
             </div>
@@ -214,7 +214,7 @@ export default {
       <!-- Section 6 -->
       <section style="background: pink" class="section">
         <div class="page-container">
-          sec6
+          contact information
         </div>
       </section>
 
@@ -634,6 +634,6 @@ export default {
 }
 
 @media only screen and (max-width: 900px) {
-  
+
 }
 </style>

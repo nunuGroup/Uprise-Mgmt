@@ -205,18 +205,12 @@ body {
   //cursor: none;
 }
 
-@font-face {
-  font-family: "Neuzeit Grotesk";
-  /*src: url("assets/FONTS/Neuzeit_Grotesk/NeuzeitGro-Reg.woff") format("woff"),
-       url("assets/FONTS/Neuzeit_Grotesk/NeuzeitGro-Reg.ttf") format("ttf");*/
-}
-
 p {
-  font-family: 'Inconsolata', monospace !important; 
+  //font-family: 'Inconsolata', monospace !important; 
 }
 
 #app {
-  font-family: 'Neuzeit Grotesk', Helvetica, Arial, sans-serif;
+  font-family: 'Gotham', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
