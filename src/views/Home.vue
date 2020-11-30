@@ -140,6 +140,10 @@ export default {
       <div :class="( bigEnter ? 'enter' : 'stage-left' )" class="modal-big"></div>
     </div-->
 
+    <div class="backdrop-container">
+      <canvas id="glscreen"></canvas>
+    </div>
+
     <!-- social media buttons -->
     <div class="soc-container">
       <a href="#" target="_blank"><div class="hoverable soc-button fb"></div></a>
@@ -164,28 +168,28 @@ export default {
     <full-page ref="fullpage" :options="options" id="fullpage">
 
       <!-- Section 1 (landing page) -->
-      <section style="background: #3d72b4" class="section landing">
+      <section class="section landing">
         <div class="landing-container">
           <div @click="goDown" class="arrows hoverable"></div>
         </div>
       </section>
       
       <!-- Section 2 -->
-      <section style="background: green" class="section">
+      <section class="section">
         <div class="page-container">
           <p>sample content 1</p>
         </div>
       </section>
 
       <!-- Section 3 -->
-      <section style="background: orange" class="section">
+      <section class="section">
         <div class="page-container">
           <p>sample content 2</p>
         </div>
       </section>
 
       <!-- Section 4 -->
-      <section style="background: maroon" class="section">
+      <section class="section">
         <div class="page-container">
           <p>sample content 3</p>
         </div>
@@ -193,7 +197,7 @@ export default {
 
       <!-- Section 5 w slides -->
       <section class="section">
-        <div style="background: purple" class="slide">
+        <div class="slide">
           <div class="page-container">
             slide example 1
             <div class="bottom-actions">
@@ -201,7 +205,7 @@ export default {
             </div>
           </div>        
         </div>
-        <div style="background: darkblue" class="slide">
+        <div class="slide">
           <div class="page-container">
             slide example 2
             <div class="bottom-actions">
@@ -224,6 +228,15 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.backdrop-container {
+  background: red;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  margin: 0px;
+}
 
 .page-container {
   height: 100vh;
