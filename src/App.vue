@@ -1,22 +1,10 @@
-<template>
-  <div id="app">
-    <div :class="(unveil ? 'swoop' : '' )" class="logo-loader"></div>
-    <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')">
-    </div>
-    <div class="cc" :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
-      <div :style="cursorCircle" class="g-cursor__circle"></div>
-      <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
-    </div>
-    <router-view :dataRef='dataRef' />
-  </div>
-</template>
-
 <script>
+import Navbar from '@/components/Navbar.vue';
 
 export default {
   name: 'App',
   components: {
-    //CustomCursor
+    Navbar
   },
   data() {
     return {
@@ -86,13 +74,27 @@ export default {
 }
 </script>
 
+<template>
+  <div id="app">
+    <div :class="(unveil ? 'swoop' : '' )" class="logo-loader"></div>
+    <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')">
+    </div>
+    <div class="cc" :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
+      <div :style="cursorCircle" class="g-cursor__circle"></div>
+      <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
+    </div>
+    <Navbar />
+    <router-view :dataRef='dataRef' />
+  </div>
+</template>
+
 <style lang="scss">
 html {
   transition: filter 1s;
 }
 
 .swoop {
-  transform: translate(-22px, -22px) scale(0.4) !important;
+  transform: translate(-42px, -42px) scale(0.3) !important;
   //background: green !important;
   transition: 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -108,7 +110,7 @@ html {
   height: 200px;
   //background: pink;  
   transition: 2s cubic-bezier(0.65, 0, 0.35, 1);
-  background-image: url('assets/sample-emblem-white.png');
+  background-image: url('assets/emblem.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

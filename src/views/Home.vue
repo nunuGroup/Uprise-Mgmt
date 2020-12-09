@@ -18,7 +18,7 @@ export default {
         scrollingSpeed: 1000,
         slidesNavigation: false,
         controlArrows: false,
-        navigation: true,
+        navigation: false,
         fadingEffect: true,
         navigationPosition: 'left',
         navigationTooltips: ['Home','Section 2', 'Section 3', 'Section 4','Section 5','Section 6'],
@@ -154,7 +154,7 @@ export default {
     </div-->
 
     <div class="backdrop-container">
-      <canvas id="glscreen"></canvas>
+      <!--canvas id="glscreen"></canvas-->
     </div>
 
     <!-- social media buttons -->
@@ -183,7 +183,9 @@ export default {
       <!-- Section 1 (landing page) -->
       <section class="section landing">
         <div class="landing-container">
-          <div @click="goDown" class="arrows hoverable"></div>
+          <div class="landing-title"></div>
+          <div @click="goDown()" class="landing-button hoverable">Learn More</div>
+          <div @click="goDown()" class="arrows hoverable"></div>
         </div>
       </section>
       
@@ -242,8 +244,59 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.landing-title {
+  background-image: url('../assets/UPRISEMGMT.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 140px;
+}
+
+.landing-button {
+  background: white;
+  height: 40px;
+  width: 180px;
+  color: black;
+  border-radius: 100px;
+  line-height: 40px;
+  font-weight: normal;
+  border: solid 1px white;
+  transition: $quick;
+
+  &:hover {
+    background: transparent;
+    color: white;
+  }
+}
+
 .backdrop-container {
-  background: red;
+  background: #141414;
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -293,8 +346,8 @@ export default {
   position: relative;
   width: 30px;
   height: 30px;
-  transform: scale(0.5);
-  margin-top: 190px;
+  transform: scale(0.6);
+  margin-top: 40px;
 }
 
 .arrows:before {
@@ -321,22 +374,22 @@ export default {
 
 @keyframes arrows {
   0% {
-    border-left: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     transform: translate(-13.33333px, -53.33333px) rotate(-45deg);
   }
   10%, 90% {
-    border-left: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
   }
   50% {
-    border-left: 10px solid rgba(255, 255, 255, 0.7);
-    border-bottom: 10px solid rgba(255, 255, 255, 0.7);
+    border-left: 2px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     transform: translate(-13.33333px, 0px) rotate(-45deg);
   }
   100% {
-    border-left: 26.66667px solid transparent;
-    border-bottom: 26.66667px solid transparent;
+    border-left: 2.66667px solid transparent;
+    border-bottom: 2.66667px solid transparent;
     transform: translate(-13.33333px, 53.33333px) rotate(-45deg);
   }
 }
@@ -353,6 +406,7 @@ export default {
 }
 
 .soc-container {
+  display: none !important;
   position: fixed;
   top: $pad;
   right: $pad;
@@ -361,37 +415,6 @@ export default {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  //background: red;
-}
-
-.landing-container {
-  background-image: url('../assets/sample-logo-white.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 0px;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  top: 0px;
-
-  h1 {
-    font-size: 48px;
-  }
-}
-
-.landing {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .wave-panel {
@@ -434,7 +457,7 @@ export default {
 .main-title {
   //background:red;
   width: 70px;
-  background-image: url("../assets/sample-emblem-white.png");
+  background-image: url("../assets/emblem.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
