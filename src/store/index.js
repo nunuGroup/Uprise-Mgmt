@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    editMode: false
   },
   mutations: {
+    toggleEditMode(state) {
+      state.editMode = !state.editMode;
+    }
   },
   actions: {
   },

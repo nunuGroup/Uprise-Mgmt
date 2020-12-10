@@ -1,8 +1,6 @@
-<template>
-  <div class="editable-text"><div class="icon editable-text-icon"></div><p>{{ thisText }}</p></div>
-</template>
-
 <script>
+import store from '../store';
+
 export default {
     name: 'EditableText',
     data() {
@@ -15,6 +13,12 @@ export default {
     },
     mounted() {
         this.fetchText();
+        console.log('edit mode?: ', this.editMode);
+    },
+    computed: {
+        editMode() {
+            return store.state.editMode;
+        }
     },
     methods: {
         fetchText() {
@@ -29,6 +33,10 @@ export default {
     }
 }
 </script>
+
+<template>
+  <div :class="( !editMode ? '' : 'editable-text' )"><div class="icon editable-text-icon"></div><p>{{ thisText }}</p></div> 
+</template>
 
 <style scoped lang="scss">
 @import '../assets/styles/global'

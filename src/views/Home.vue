@@ -1,5 +1,5 @@
 <script>
-import firebase from 'firebase';
+//import firebase from 'firebase';
 import EditableText from '@/components/EditableText.vue'
 
 export default {
@@ -9,7 +9,10 @@ export default {
   },
   data() {
     return {
-      name: null,
+      text: {
+        name: null,
+        landingText: null
+      },
       waveOffset: "120vw",
       waveLeft: true,
       options: {
@@ -21,10 +24,10 @@ export default {
         navigation: false,
         fadingEffect: true,
         navigationPosition: 'left',
-        navigationTooltips: ['Home','Section 2', 'Section 3', 'Section 4','Section 5','Section 6'],
+        navigationTooltips: ['Home','About', 'Services', 'Social Media','Case Studies','Contact'],
         showActiveTooltip: true,
         easingcss3: 'cubic-bezier(0.65, 0, 0.35, 1)', //swoopy
-        anchors: ['home','section2', 'section3', 'section4','section5','section6'],
+        anchors: ['home','about', 'services', 'social_media','case_studies','contact'],
         onLeave: (origin, destination, direction) => {
           this.handleLeave(origin, destination, direction);
         },
@@ -58,10 +61,9 @@ export default {
   },
   methods: {
     fetchText() {
-      firebase.firestore().collection("test-data").where("age","==",23).get().then((docs) => {
+      this.fireFetch('text', 'rel == section2text', (docs) => {
         docs.forEach((doc) => {
-          console.log(doc.data());
-          this.name = doc.data().name;
+          this.text.landingText = doc.data().value;
         });
       });
     },
@@ -184,6 +186,7 @@ export default {
       <section class="section landing">
         <div class="landing-container">
           <div class="landing-title"></div>
+          <p class="landing-text">{{ text.landingText }}</p>
           <div @click="goDown()" class="landing-button hoverable">Learn More</div>
           <div @click="goDown()" class="arrows hoverable"></div>
         </div>
@@ -244,6 +247,11 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.landing-text {
+  margin-bottom: 40px;
+  opacity: 0.4;
+}
+
 .landing-container {
   display: flex;
   flex-direction: column;
@@ -275,7 +283,7 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;
-  height: 140px;
+  height: 112px;
 }
 
 .landing-button {
