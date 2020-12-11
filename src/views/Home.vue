@@ -10,8 +10,8 @@ export default {
   data() {
     return {
       text: {
-        name: null,
-        landingText: null
+        landingText: null,
+        section2text: null
       },
       waveOffset: "120vw",
       waveLeft: true,
@@ -61,9 +61,14 @@ export default {
   },
   methods: {
     fetchText() {
-      this.fireFetch('text', 'rel == section2text', (docs) => {
+      this.fireFetch('text', 'rel == landingText', (docs) => {
         docs.forEach((doc) => {
           this.text.landingText = doc.data().value;
+        });
+      });
+      this.fireFetch('text', 'rel == section2text', (docs) => {
+        docs.forEach((doc) => {
+          this.text.section2text = doc.data().value;
         });
       });
     },
@@ -186,7 +191,9 @@ export default {
       <section class="section landing">
         <div class="landing-container">
           <div class="landing-title"></div>
-          <p class="landing-text">{{ text.landingText }}</p>
+          <div class="landing-text">
+            <EditableText rel="landingText" align="center" width="500px" />
+          </div>
           <div @click="goDown()" class="landing-button hoverable">Learn More</div>
           <div @click="goDown()" class="arrows hoverable"></div>
         </div>
@@ -195,7 +202,7 @@ export default {
       <!-- Section 2 -->
       <section class="section">
         <div class="page-container">
-          <EditableText rel="section2text" />
+          <EditableText rel="section2text" align="center" width="500px" />
         </div>
       </section>
 
@@ -246,6 +253,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.sec2text {
+
+}
 
 .landing-text {
   margin-bottom: 40px;
