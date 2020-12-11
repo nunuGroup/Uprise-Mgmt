@@ -1,5 +1,6 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
+import store from './store';
 
 export default {
   name: 'App',
@@ -19,6 +20,9 @@ export default {
     }
   },
   computed: {
+    editMode() {
+      return store.state.editMode;
+    },
     cursorCircle() {
       return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
     },
@@ -79,7 +83,7 @@ export default {
     <div :class="(unveil ? 'swoop' : '' )" class="logo-loader"></div>
     <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')">
     </div>
-    <div class="cc" :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
+    <div :style="( editMode ? 'display:none' : 'display:block' )" class="cc" :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
       <div :style="cursorCircle" class="g-cursor__circle"></div>
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div>
@@ -217,7 +221,7 @@ p {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
-  background: #222; 
+  //background: #222;
 }
 
 // --------- cursor stuff ----------
@@ -333,7 +337,7 @@ p {
    }
 
    .landing-container {
-     width: 300px !important;
+     //width: 300px !important;
      height: 80px !important;
    }
 

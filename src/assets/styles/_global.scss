@@ -141,16 +141,26 @@ $quick: 200ms;
 // ---------- editable ----------
 
 .editable-text {
-  border: 4px solid white;
-  border-radius: $rad;
-  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  //padding: 0px 24px;
+
+  &:hover {
+    border: 2px solid white;
+
+    .editable-text-icon {
+      opacity: 1;
+    }
+  }
 
   .editable-text-icon {
     background-image: url('../assets/icons/edit-bubble.svg');
-    height: 32px;
-    width: 32px;
+    height: 24px;
+    width: 24px;
     float: right;
-    margin-top: -28px;
-    margin-right: -40px;
+    margin-top: -12px;
+    margin-right: -24px;
+    transform: translateX(-12px);
+    opacity: 0;
   }
 }
