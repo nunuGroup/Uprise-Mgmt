@@ -254,9 +254,6 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
-body {
-}
-
 .sec2text {
 
 }

@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    editMode: false
+    editMode: true
   },
   mutations: {
     toggleEditMode(state) {
