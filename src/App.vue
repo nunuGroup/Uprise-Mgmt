@@ -97,6 +97,17 @@ html {
   transition: filter 1s;
 }
 
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
+}
+
 .swoop {
   transform: translate(-42px, -42px) scale(0.3) !important;
   //background: green !important;
@@ -118,6 +129,8 @@ html {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+    mix-blend-mode: difference;
+  
 }
 
 .fp-slideNav {
@@ -129,11 +142,13 @@ html {
 }
 
 #fp-nav {
-  top: 450px !important;
+  bottom: 42px !important;
+  top: auto !important;
   margin-left: 45px;
+  mix-blend-mode: difference;
 
   li {
-    margin-bottom: 36px !important;
+    margin-top: 12px !important;
   }
 
   .fp-tooltip {
@@ -147,6 +162,7 @@ html {
     background: white !important;
     border: 2px solid white;
     //transform: translate(4px,4px);
+    margin: -8px 0 0 -8px;
 
     &:hover {
       //transform: translate(-1px,-1px) !important;

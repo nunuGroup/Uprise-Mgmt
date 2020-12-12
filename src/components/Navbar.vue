@@ -4,7 +4,7 @@
         <router-link to="/"><li class="nav-item hoverable">Home</li></router-link>
         <router-link to="/"><li class="nav-item hoverable">About</li></router-link>
         <router-link to="/"><li class="nav-item hoverable">Services</li></router-link>
-        <router-link to="/"><li class="nav-item hoverable">Social Media</li></router-link>
+        <router-link to="/social_media_management"><li class="nav-item hoverable">Social Media Management</li></router-link>
         <router-link to="/"><li class="nav-item hoverable">Case Studies</li></router-link>
         <router-link to="/"><li class="nav-item hoverable">Contact</li></router-link>
     </ul>
@@ -33,6 +33,7 @@ export default {
     align-items: center;
     justify-content: flex-end;
     line-height: 0px;
+    mix-blend-mode: difference;
 
     ul {
         list-style: none;
