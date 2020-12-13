@@ -71,7 +71,7 @@ export default {
       currentProjectText: '',
       currentProjectTitle: '',
       scrollOverflow: false,
-      context: 0,
+      context: 0
     }
   },
   props: {
@@ -214,11 +214,17 @@ export default {
     </div>
 
     <div class="phone-layer">
-        <div class="phone-container main-phone" :class="'pos' + activeSection"><Phone /></div>
+        <div class="phone-container main-phone" :class="'pos' + activeSection">
+          <Phone :screenContent="activeSection" />
+        </div>
         
-        <div class="phone-container phone2" :class="(activeSection == 2 ? 'phone2-enter' : ( activeSection == 3 ? 'phone2-next' : 'phone2-stage' ) )"><Phone /></div>
+        <div class="phone-container phone2" :class="(activeSection == 2 ? 'phone2-enter' : ( activeSection == 3 ? 'phone2-next' : 'phone2-stage' ) )">
+          <Phone />
+        </div>
 
-        <div class="phone-container phone4" :class="(activeSection == 3 ? 'phone4-enter' : 'phone4-stage' )"><Phone /></div>
+        <div class="phone-container phone4" :class="(activeSection == 3 ? 'phone4-enter' : 'phone4-stage' )">
+          <Phone />
+        </div>
     </div>
 
     <!-- main (fullpage.js; TODO: Configuure locomotive scroll) -->
@@ -226,16 +232,16 @@ export default {
 
         <!-- Section 1 (landing page) -->
         <section class="section landing">
-        <div class="page-container">
-            <div class="bar1">
-              <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="head" id="head1">
-                <h1 class="head head1">Social Media Management & Strategic Consulting</h1>
+          <div class="page-container">
+              <div class="bar1">
+                <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="head" id="head1">
+                  <h1 class="head head1">Social Media Management & Strategic Consulting</h1>
+                </div>
+                <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="main-text socialText1">
+                  <p>UPRISE Management is a full-service social media and social commerce management and asset creation agency. With a team of experienced professionals and many years of success in the industry, we want to help your business create a unique brand identity and build a strong social media strategy.</p>
+                </div>
               </div>
-              <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="main-text socialText1">
-                <p>UPRISE Management is a full-service social media and social commerce management and asset creation agency. With a team of experienced professionals and many years of success in the industry, we want to help your business create a unique brand identity and build a strong social media strategy.</p>
-              </div>
-            </div>
-        </div>
+          </div>
         </section>
         
         <!-- Section 2 -->
@@ -259,9 +265,9 @@ export default {
                 <div class="main-text main3">
                   <h1 class="main-head">Creative Direction</h1>
                   <h4>Strategic Alignment</h4>
-                  <p>Your social media content strategy, tactics and every day programming should always align with with your business goals. Whether it’s brand awareness, customer engagement, website traffic, sales or retention (increased lifetime customer values), our team will help you meet your business objectives by aligning a content plan, within the relevant paid social framework, around your specific targets.</p>
+                  <p>Your social media content strategy, tactics and every day programming should always align with with your business goals. Whether it’s brand awareness, customer engagement, website traffic, sales or retention (increased lifetime customer values), our team will help you meet your business objectives by aligning a content plan, within the relevant paid social framework, around your specific targets.</p><p>Brand identity is important, because it increases the likelihood that someone will land on your profile and choose to follow you, based on the look and feel of your content. Creating an appealing visual identity to your target audience, through social media, will elevate and expand your digital outreach, with the purpose of attracting more customers and growing your business.</p><p>Whether you’re just starting out or looking to rebrand, our team has many solutions, through years of experience in different industries, to help your business thrive.</p>
                   <h4>Paid Social Framework</h4>
-                  <p>Understanding which platforms and tactics will best drive brand growth, engagement and traffic is a fundamental aspect of your social media content strategy. Our team will coordinate your paid social budget and efforts (goals, platforms, tactics) with your business goals, and ensure your brand is operating within the best framework to bring you consistency and success.</p>
+                  <p>Understanding which platforms and tactics will best drive brand growth, engagement and traffic is a fundamental aspect of your social media content strategy. Our team will coordinate your paid social budget and efforts (goals, platforms, tactics) with your business goals, and ensure your brand is operating within the best framework to bring you consistency and success.</p><p>Our team will help you layout visual guidelines, to design your brand’s aesthetic, through creating logos with multiple variations for different applications, a consistent color scheme and lighting/filters for your content, to start building your brand’s look and feel. With visually appealing and relevant content your brand can reach a wider clientele, attract new customers and stay relevant.</p>
                 </div>
             </div>
         </section>
@@ -337,11 +343,16 @@ export default {
 @import '../assets/styles/global';
 
 .main4 {
-  margin-left: 50vw !important; 
+  margin-left: 50vw !important;
 }
 
 .main3 {
   margin-left: -40vw !important;
+  width: 600px !important;
+
+  p {
+    font-size: 14px !important;
+  } 
 }
 
 .main2 {
@@ -387,7 +398,7 @@ export default {
 .head2 {
   color: white;
   text-align: left;
-  margin-top: 32vh;
+  margin-top: 30vh;
   font-size: 36px;
   margin-left: 64px;
   transition-delay: 1.5s !important;
@@ -496,13 +507,13 @@ export default {
 
     .phone2-next {
         opacity: 1;
-        transform: scale(0.5) rotate(0deg) translate(0vw, 0vh);
+        transform: scale(0.5) rotate(0deg) translate(-8vw, 0vh);
         z-index: -1;
     }
 
     .phone2-enter {
         opacity: 1;
-        transform: scale(0.4) rotate(-15deg) translate(30vw, 55vh);
+        transform: scale(0.4) rotate(-15deg) translate(40vw, 55vh);
         z-index: -1;
     }
 
@@ -513,7 +524,7 @@ export default {
 
     .phone4-enter {
         opacity: 1;
-        transform: scale(0.5) rotate(0deg) translate(-45vw, 0vh);
+        transform: scale(0.5) rotate(0deg) translate(-58vw, 0vh);
         transition-delay: 300ms;
     }
 
@@ -545,11 +556,11 @@ export default {
     }
 
     .pos2 {
-        transform: scale(0.4) rotate(15deg) translate(58vw, -55vh);
+        transform: scale(0.4) rotate(15deg) translate(68vw, -55vh);
     }
 
     .pos3 {
-        transform: scale(0.6) rotate(0deg) translate(-18.7vw, 0vh);
+        transform: scale(0.6) rotate(0deg) translate(-27vw, 0vh);
     }
 
     .pos4 {

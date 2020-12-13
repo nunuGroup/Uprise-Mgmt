@@ -1,6 +1,6 @@
 <template>
     <div class="phone">
-        <div class="screen"></div>
+        <div class="screen" :class="'screen'+screenContent"></div>
 	</div>
 </template>
 
@@ -13,15 +13,16 @@ export default {
         }
     },
     props: {
-        screenImg: String
+        screenContent: Number
     },
     created() {
 
     },
     mounted() {
         console.log('phone mounted');
+        console.log('oboy', this.screenContent);
     },
-    methods() {
+    methods: {
 
     }
 }
@@ -36,9 +37,9 @@ export default {
     position: relative;
 	margin: 0 auto;
 	width: 542px !important;
-	height: 1275px !important;
+	height: 1245px !important;
     border-radius: 87.5px;
-    box-shadow: 
+    box-shadow:
         inset 
         6px -6px 15px rgba(145,160,180,.45), 
         -10px 30px 40px rgba(118,146,180,.18);
@@ -53,9 +54,8 @@ export default {
 
 .screen {
     width: 515px;
-    height: 1145px;
+    height: 1110px;
 	border-radius: 45px;
-	//background-image: url("../assets/social-media/instagram/motols.jpg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -64,6 +64,27 @@ export default {
     transform-origin: 0 0;
     overflow: hidden;
     will-change: transform;
+    transition: 1s;
+}
+
+.screen0 {
+	background-image: url("../assets/social-media/instagram/Motorola lifestyle Instagram.png");
+}
+
+.screen1 {
+	background-image: url("../assets/social-media/instagram/Motorola Baby Instagram.png");
+}
+
+.screen2 {
+	background-image: url("../assets/social-media/instagram/Motorola lifestyle Instagram.png");
+}
+
+.screen3 {
+	background-image: url("../assets/social-media/instagram/motols.jpg");
+}
+
+.screen4 {
+	background-image: url("../assets/social-media/instagram/motols.jpg");
 }
 
 </style>

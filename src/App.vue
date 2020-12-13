@@ -144,11 +144,10 @@ html {
 }
 
 #fp-nav {
-  bottom: 42px !important;
   top: auto !important;
   margin-left: 27px;
   mix-blend-mode: difference;
-  bottom: -36px !important;
+  bottom: -24px !important;
 
   li {
     margin-top: 12px !important;
