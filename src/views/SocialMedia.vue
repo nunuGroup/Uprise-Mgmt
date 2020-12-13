@@ -487,7 +487,7 @@ export default {
 .bar1 {
     background:black;
     width: 100%;
-    height: 480px;
+    height: 507px;
     z-index: 9;
     position: absolute;
     bottom: 0px;

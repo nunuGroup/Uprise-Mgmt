@@ -1,6 +1,23 @@
 <template>
     <div class="phone">
-        <div class="screen" :class="( alt1 ? 'alt1-'+contentIndex : ( alt2 ? 'alt2-'+contentIndex : 'screen'+contentIndex) )"></div>
+        <div class="screen" :class="( alt1 ? 'alt1-'+contentIndex : ( alt2 ? 'alt2-'+contentIndex : 'screen'+contentIndex) )">
+            <div v-if="contentIndex == 7" class="content-inner">
+                <div class="app-top top-motobb"></div>
+                <div class="app-content content-motobb"></div>
+            </div>
+            <div v-if="contentIndex == 8" class="content-inner">
+                <div class="app-top top-motolifestyle"></div>
+                <div class="app-content content-motolifestyle"></div>
+            </div>
+            <div v-if="contentIndex == 9" class="content-inner">
+                <div class="app-top top-obliphica"></div>
+                <div class="app-content content-obliphica"></div>
+            </div>
+            <div v-if="contentIndex == 10" class="content-inner">
+                <div class="app-top top-ateam"></div>
+                <div class="app-content content-ateam"></div>
+            </div>
+        </div>
 	</div>
 </template>
 
@@ -31,6 +48,63 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@keyframes scroll {
+    from {
+        background-position-y: 0px;
+    } to {
+        background-position-y: -862px;
+    }
+}
+
+.content-motobb {
+    background-image: url('../assets/social-media/instagram/crops/content_motobaby.png');
+}
+
+.content-motolifestyle {
+    background-image: url('../assets/social-media/instagram/crops/content_motolifestyle.png');
+}
+
+.content-obliphica {
+    background-image: url('../assets/social-media/instagram/crops/content_obliphica.png');
+}
+
+.content-ateam {
+    background-image: url('../assets/social-media/instagram/crops/content_ateam.png');
+}
+
+.app-content {
+    height: 362px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: repeat-y;
+    animation: scroll 24s linear infinite;
+    transition: 1s;
+}
+
+.app-top {
+    width: 100%;
+    height: 145px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-motobb {
+    background-image: url('../assets/social-media/instagram/crops/topbar_motobaby.png');
+}
+
+.top-motolifestyle {
+    background-image: url('../assets/social-media/instagram/crops/topbar_motolifestyle.png');
+}
+
+.top-obliphica {
+    background-image: url('../assets/social-media/instagram/crops/topbar_obliphica.png');
+}
+
+.top-ateam {
+    background-image: url('../assets/social-media/instagram/crops/topbar_ateam.png');
+}
 
 .inner-rotatable {
     //background: yellow;
