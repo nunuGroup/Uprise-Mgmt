@@ -285,49 +285,43 @@ export default {
 
         <section class="section">
             <div class="page-container">
-
+              <!--div class="bar1 g"></div-->
             </div>
         </section>
 
         <section class="section">
             <div class="page-container">
-
+              <!--div class="bar2 g"></div-->
             </div>
         </section>
 
         <section class="section">
             <div class="page-container">
-
+              <!--div class="bar1 g"></div-->
             </div>
         </section>
 
         <section class="section">
             <div class="page-container">
-
+              <div class="bar1 c1"><div class="cs-logo cs1"></div></div>
             </div>
         </section>
 
         <section class="section">
             <div class="page-container">
-
+              <div class="bar1 c2"><div class="cs-logo cs2"></div></div>
             </div>
         </section>
 
         <section class="section">
             <div class="page-container">
-
+              <div class="bar1 c3"><div class="cs-logo cs3"></div></div>
             </div>
         </section>
 
         <section class="section">
             <div class="page-container">
-
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="page-container">
-
+              <div class="bar1 c4"><div class="cs-logo cs4"></div></div>
             </div>
         </section>
 
@@ -339,6 +333,52 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.cs1 {
+  background-image: url('../assets/social-media/motobb.png');
+}
+
+.cs2 {
+  background-image: url('../assets/social-media/motolifestyle.png');
+}
+
+.cs3 {
+  background-image: url('../assets/social-media/obliphica.png');
+}
+
+.cs4 {
+  background-image: url('../assets/social-media/ateam.svg');
+}
+
+.cs-logo {
+  height: 60px;
+  width: 280px;
+  margin-top: 64px;
+  margin-left: 124px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c1 {
+  background: linear-gradient(90deg,#E8E8F4,#A59DB8) !important;
+}
+
+.c2 {
+  background: linear-gradient(90deg,#213F35,#E5DBD1) !important;
+}
+
+.c3 {
+  background: linear-gradient(90deg,#F45516,#8863CA) !important;
+}
+
+.c4 {
+  background: linear-gradient(90deg,#000000,#F5AB92) !important;
+}
+
+.g {
+  background: #eee !important;
+}
 
 .main4 {
   margin-left: 50vw !important;

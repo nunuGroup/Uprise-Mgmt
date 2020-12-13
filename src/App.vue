@@ -150,7 +150,7 @@ html {
   bottom: -24px !important;
 
   li {
-    margin-top: 12px !important;
+    margin-top: 14px !important;
   }
 
   .fp-tooltip {
