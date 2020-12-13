@@ -215,15 +215,15 @@ export default {
 
     <div class="phone-layer">
         <div class="phone-container main-phone" :class="'pos' + activeSection">
-          <Phone :screenContent="activeSection" />
+          <Phone :contentIndex="activeSection" />
         </div>
         
         <div class="phone-container phone2" :class="(activeSection == 2 ? 'phone2-enter' : ( activeSection == 3 ? 'phone2-next' : 'phone2-stage' ) )">
-          <Phone />
+          <Phone :alt1="true" :contentIndex="activeSection" />
         </div>
 
         <div class="phone-container phone4" :class="(activeSection == 3 ? 'phone4-enter' : 'phone4-stage' )">
-          <Phone />
+          <Phone :alt2="true" :contentIndex="activeSection" />
         </div>
     </div>
 

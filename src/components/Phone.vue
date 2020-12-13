@@ -1,6 +1,6 @@
 <template>
     <div class="phone">
-        <div class="screen" :class="'screen'+screenContent"></div>
+        <div class="screen" :class="( alt1 ? 'alt1-'+contentIndex : ( alt2 ? 'alt2-'+contentIndex : 'screen'+contentIndex) )"></div>
 	</div>
 </template>
 
@@ -13,14 +13,16 @@ export default {
         }
     },
     props: {
-        screenContent: Number
+        contentIndex: Number,
+        alt1: Boolean,
+        alt2: Boolean
     },
     created() {
 
     },
     mounted() {
         console.log('phone mounted');
-        console.log('oboy', this.screenContent);
+        console.log('oboy', this.contentIndex);
     },
     methods: {
 
@@ -68,7 +70,7 @@ export default {
 }
 
 .screen0 {
-	background-image: url("../assets/social-media/instagram/Motorola lifestyle Instagram.png");
+	background-image: url("../assets/social-media/instagram/Obliphica Instagram.png");
 }
 
 .screen1 {
@@ -76,15 +78,108 @@ export default {
 }
 
 .screen2 {
-	background-image: url("../assets/social-media/instagram/Motorola lifestyle Instagram.png");
+	background-image: url("../assets/social-media/instagram/full/full-ateam2.png");
 }
+
+// ---------- alt1 ----------
+
+.alt1-0 {
+    background-image: url("../assets/social-media/instagram/full/full-obliphica.png");
+}
+
+.alt1-1 {
+    background-image: url("../assets/social-media/instagram/full/full-obliphica.png");
+}
+
+.alt1-2 {
+    background-image: url("../assets/social-media/instagram/full/full-obliphica.png");
+}
+
+.alt1-3 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+
+.alt1-4 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+
+.alt1-5 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+.alt1-6 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+.alt1-7 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+.alt1-8 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+.alt1-9 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+.alt1-10 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+.alt1-11 {
+    background-image: url("../assets/social-media/instagram/comments/comment3.png");
+}
+
+// ---------- alt2 ----------
+
+.alt2-0 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-1 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-2 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-3 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-4 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-5 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-6 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-7 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-8 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-9 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-10 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+.alt2-11 {
+    background-image: url("../assets/social-media/instagram/comments/comment1.png");
+}
+
+
+// ---------- end of alt ----------
 
 .screen3 {
-	background-image: url("../assets/social-media/instagram/motols.jpg");
-}
-
-.screen4 {
-	background-image: url("../assets/social-media/instagram/motols.jpg");
+	background-image: url("../assets/social-media/instagram/comments/comment2.png");
 }
 
 </style>
