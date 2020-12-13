@@ -39,12 +39,14 @@ export default {
 <template>
   <div :class="( !editMode ? '' : 'editable-text' )">
     <div class="icon editable-text-icon"></div>
-        <input 
+        <input
+            v-if="editMode"
             type="textarea" 
             :style="'text-align:' + align + '; width:' + width"
             class="editable-text-input" 
             :value="text" 
         />
+        <p :style="'text-align:' + align">{{ text }}</p>
     </div> 
 </template>
 
@@ -56,6 +58,10 @@ export default {
     border: none;
     background: transparent;
     //padding: 12px 0px;
+}
+
+p {
+    line-height: 1.5;
 }
 
 input {

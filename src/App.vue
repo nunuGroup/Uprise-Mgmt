@@ -83,7 +83,10 @@ export default {
     <div :class="(unveil ? 'swoop' : '' )" class="logo-loader"></div>
     <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')">
     </div>
-    <div :style="( editMode ? 'display:none' : 'display:block' )" class="cc" :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
+    <div 
+      :style="( editMode ? 'display:none' : 'display:block' )" 
+      class="cc" 
+      :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
       <div :style="cursorCircle" class="g-cursor__circle"></div>
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div>
@@ -129,8 +132,7 @@ html {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-    mix-blend-mode: difference;
-  
+  mix-blend-mode: difference;
 }
 
 .fp-slideNav {
@@ -144,8 +146,9 @@ html {
 #fp-nav {
   bottom: 42px !important;
   top: auto !important;
-  margin-left: 45px;
+  margin-left: 27px;
   mix-blend-mode: difference;
+  bottom: -36px !important;
 
   li {
     margin-top: 12px !important;
@@ -162,7 +165,7 @@ html {
     background: white !important;
     border: 2px solid white;
     //transform: translate(4px,4px);
-    margin: -8px 0 0 -8px;
+    margin: -8px 0 0 -8px !important;
 
     &:hover {
       //transform: translate(-1px,-1px) !important;
@@ -365,7 +368,7 @@ p {
      position: absolute;
      margin: 0px !important;
      transform: rotate(270deg);
-     top: -50px !important;
+     top: 0px !important;
      left: 180px !important;
      width: 12px;
 

@@ -1,11 +1,12 @@
 <script>
-//import firebase from 'firebase';
-//import EditableText from '@/components/EditableText.vue'
+//import EditableText from '@/components/EditableText.vue';
+import Phone from '@/components/Phone.vue';
 
 export default {
   name: 'SocialMedia',
   components: {
-    //EditableText
+    //EditableText,
+    Phone
   },
   data() {
     return {
@@ -16,7 +17,7 @@ export default {
       options: {
         normalScrollElements: '.test-container, .modal-active, .modal-inactive, .more-work-grid, .more-work-container, .modal-images',
         loopHorizontal: false,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 2000,
         slidesNavigation: false,
         controlArrows: false,
         navigation: true,
@@ -37,7 +38,7 @@ export default {
             'Case Study | Obliphica', 
             'Case Study | aTeam'
         ],
-        easingcss3: 'cubic-bezier(0.65, 0, 0.35, 1)', //swoopy
+        easingcss3: 'ease', //swoopy
         anchors: [
             'social_media_management',
             'why_its_important', 
@@ -212,63 +213,119 @@ export default {
       </div>
     </div>
 
+    <div class="phone-layer">
+        <div class="phone-container main-phone" :class="'pos' + activeSection"><Phone /></div>
+        
+        <div class="phone-container phone2" :class="(activeSection == 2 ? 'phone2-enter' : ( activeSection == 3 ? 'phone2-next' : 'phone2-stage' ) )"><Phone /></div>
+
+        <div class="phone-container phone4" :class="(activeSection == 3 ? 'phone4-enter' : 'phone4-stage' )"><Phone /></div>
+    </div>
+
     <!-- main (fullpage.js; TODO: Configuure locomotive scroll) -->
     <full-page ref="fullpage" :options="options" id="fullpage">
 
-      <!-- Section 1 (landing page) -->
-      <section class="section landing">
+        <!-- Section 1 (landing page) -->
+        <section class="section landing">
         <div class="page-container">
-
-        </div>
-      </section>
-      
-      <!-- Section 2 -->
-      <section class="section">
-        <div class="page-container">
-
-        </div>
-      </section>
-
-      <!-- Section 3 -->
-      <section class="section">
-        <div class="page-container">
-
-        </div>
-      </section>
-
-      <!-- Section 4 -->
-      <section class="section">
-        <div class="page-container">
-
-        </div>
-      </section>
-
-      <!-- Section 5 w slides -->
-      <section class="section">
-        <div class="slide">
-          <div class="page-container">
-            slide example 1
-            <div class="bottom-actions">
-              <div @click="moveRight()" class="hoverable nav-button next">Next</div>
+            <div class="bar1">
+              <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="head" id="head1">
+                <h1 class="head head1">Social Media Management & Strategic Consulting</h1>
+              </div>
+              <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="main-text socialText1">
+                <p>UPRISE Management is a full-service social media and social commerce management and asset creation agency. With a team of experienced professionals and many years of success in the industry, we want to help your business create a unique brand identity and build a strong social media strategy.</p>
+              </div>
             </div>
-          </div>        
         </div>
-        <div class="slide">
+        </section>
+        
+        <!-- Section 2 -->
+        <section class="section">
           <div class="page-container">
-            slide example 2
-            <div class="bottom-actions">
-              <div @click="moveLeft()" class="hoverable nav-button prev">Prev</div>
+              <div class="bar2">
+                <h1 class="head head2">Social Media Management & Strategic Consulting</h1>
+                <div class="main-text main2">
+                  <h3>WHY IT'S IMPORTANT</h3>
+                  <p>Whether you’re upgrading, revitalizing or starting from scratch, a strong social media strategy and presence is important.</p>
+                  <p>Customer engagement and retention is an important and effective tool to boost sales, reach more customers and revitalize your business.</p>
+                  <p>Your strategy will include continuous and creative posts, digital storytelling, impeccable photography, professional videos, celebrity and influencer collaborations, as well as planned giveaways.</p>
+                </div>
+              </div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section">
+            <div class="page-container" style="background: white">
+                <div class="main-text main3">
+                  <h1 class="main-head">Creative Direction</h1>
+                  <h4>Strategic Alignment</h4>
+                  <p>Your social media content strategy, tactics and every day programming should always align with with your business goals. Whether it’s brand awareness, customer engagement, website traffic, sales or retention (increased lifetime customer values), our team will help you meet your business objectives by aligning a content plan, within the relevant paid social framework, around your specific targets.</p>
+                  <h4>Paid Social Framework</h4>
+                  <p>Understanding which platforms and tactics will best drive brand growth, engagement and traffic is a fundamental aspect of your social media content strategy. Our team will coordinate your paid social budget and efforts (goals, platforms, tactics) with your business goals, and ensure your brand is operating within the best framework to bring you consistency and success.</p>
+                </div>
             </div>
-          </div>        
-        </div>
-      </section>
+        </section>
 
-      <!-- Section 6 -->
-      <section style="background: pink" class="section">
-        <div class="page-container">
+        <!-- Section 4 -->
+        <section class="section">
+            <div class="page-container">
+                <div class="main-text main4">
+                  <h1 class="main-head">Community Management</h1>
+                  <h4>Why it's Important</h4>
+                  <p>Community management is a hybrid between the modern customer service rep and a social media specialist. It is critical to the success of a company’s social media program, because without it, a brand comes off cold, corporate and as if they simply don’t care.</p>
+                  <h4>Daily Management</h4>
+                  <p>Using your brand’s voice, our team will help your business engage, expand and nurture your audience of customers and prospects to facilitate your brand relationships. We will curate responses, posts, engage with your followers and oversee the publication of compelling content that resonates with your brand’s digital community, so you can focus on running your business.</p>
+                </div>
+            </div>
+        </section>
 
-        </div>
-      </section>
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="page-container">
+
+            </div>
+        </section>
 
     </full-page>
   </div>
@@ -279,6 +336,251 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.main4 {
+  margin-left: 50vw !important; 
+}
+
+.main3 {
+  margin-left: -40vw !important;
+}
+
+.main2 {
+    margin-left: 24vh;
+    margin-top: 13vh;
+}
+
+.main-text {
+  z-index: 999;
+  color: black;
+  text-align: left;
+  width: 500px;
+  line-height: 1.5;
+  
+  p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: $socialHeadColor;
+  }
+
+  h4 {
+    opacity: 0.3;
+  }
+
+  h1 {
+    color: $socialHeadColor;
+    font-size: 36px;
+  }
+}
+
+.head1 {
+  color: $socialHeadColor;
+  text-align: left;
+  margin-top: 0px;
+  font-size: 36px;
+  margin-left: 0px;
+  transition-delay: 1.5s !important;
+}
+
+.head2 {
+  color: white;
+  text-align: left;
+  margin-top: 32vh;
+  font-size: 36px;
+  margin-left: 64px;
+  transition-delay: 1.5s !important;
+}
+
+.social-text-enter {
+  transform: translateX(0px);
+  opacity: 1;  
+  transition: 1s $ezpz;
+}
+
+.social-text-stage {
+  transform: translateX(0px) scale(0.95);
+  opacity: 0;
+  transition: 1s $ezpz;
+}
+
+.head {
+  transition-delay: 0ms;
+}
+
+#head1 {
+  position: absolute;
+  top: -72px;
+  left: 39vw;
+  z-index: 9999;
+}
+
+.socialText1 {
+  //background: red;
+  width: 500px;
+  //height: 300px;
+  margin-left: 39vw;
+  margin-top: 42px;
+  color: white !important;
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px;
+}
+
+.grid-phone-item {
+    transform: scale(0.3)
+}
+
+.bar1 {
+    background:black;
+    width: 100%;
+    height: 480px;
+    z-index: 9;
+    position: absolute;
+    bottom: 0px;
+}
+
+.bar2 {
+    background:black;
+    width: 100%;
+    height: 400px;
+    z-index: 9;
+    position: absolute;
+    top: 0px;
+}
+
+.bar3 {
+    display: none;
+    background:white;
+    width: 100%;
+    height: 300px;
+    z-index: 9;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+}
+
+.phone-layer {
+    position: fixed;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .phone-container {
+        transition: 2.2s $ezpz;
+    }
+
+    .phone2 {
+        position: absolute;
+    }
+
+    .phone3 {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .phone4 {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .phone2-next {
+        opacity: 1;
+        transform: scale(0.5) rotate(0deg) translate(0vw, 0vh);
+        z-index: -1;
+    }
+
+    .phone2-enter {
+        opacity: 1;
+        transform: scale(0.4) rotate(-15deg) translate(30vw, 55vh);
+        z-index: -1;
+    }
+
+    .phone3-enter {
+        opacity: 1;
+        transform: scale(0.5) rotate(0deg) translate(0px, 0px);
+    }
+
+    .phone4-enter {
+        opacity: 1;
+        transform: scale(0.5) rotate(0deg) translate(-45vw, 0vh);
+        transition-delay: 300ms;
+    }
+
+    .phone2-stage {
+        opacity: 0;
+        transform: scale(0.3) rotate(-0deg) translate(1200px, 0px);
+        z-index: -1;
+    }
+
+    .phone3-stage {
+        opacity: 0;
+        transform: scale(0.45) rotate(0deg) translate(0px, 120px);
+        z-index: -1;
+        transition-delay: 300ms;
+    }
+
+    .phone4-stage {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg) translate(-110vw, 120px);
+        z-index: -1;
+    }
+
+    .pos0 {
+        transform: scale(0.9) translate(-30vw, 35vh);
+    }
+
+    .pos1 {
+        transform: scale(0.55) rotate(12deg) translate(35vw, -10vh);
+    }
+
+    .pos2 {
+        transform: scale(0.4) rotate(15deg) translate(58vw, -55vh);
+    }
+
+    .pos3 {
+        transform: scale(0.6) rotate(0deg) translate(-18.7vw, 0vh);
+    }
+
+    .pos4 {
+        transform: scale(1) rotate(-90deg) translate(0vw, 0vh);
+    }
+    
+    .pos5 {
+        transform: scale(1) rotate(-90deg) translate(0vw, 0vh);
+    }
+
+    .pos6 {
+        transform: scale(1) rotate(-90deg) translate(0vw, 0vh);
+    }
+
+    .pos7 {
+        transform: scale(1.4) rotate(0deg) translate(16vw, 40vh);
+    }
+        
+    .pos8 {
+        transform: scale(1.4) rotate(0deg) translate(16vw, 40vh);
+    }
+    
+    .pos9 {
+        transform: scale(1.4) rotate(0deg) translate(16vw, 40vh);
+    }
+    
+    .pos10 {
+        transform: scale(1.4) rotate(0deg) translate(16vw, 40vh);
+    }
+}
+
 .corner-down {
     //background:red;
     position: absolute;
@@ -287,7 +589,7 @@ export default {
     z-index: 9999;
     bottom: 64px;
     mix-blend-mode: difference;
-    left: 58px;
+    left: 40px;
 }
 
 .sm {
