@@ -28,7 +28,6 @@ export default {
             'Social Media Management', 
             "Why it's important", 
             'Creative Direction', 
-            'Strategic Alignment',
             'Community Management',
             'Benchmarking & Analysis',
             'Pricing',
@@ -43,7 +42,6 @@ export default {
             'social_media_management',
             'why_its_important', 
             'creative_direction', 
-            'strategic_alignment',
             'community_management',
             'benchmarking_and_analysis',
             'pricing',
@@ -564,15 +562,15 @@ export default {
     }
 
     .pos4 {
-        transform: scale(1) rotate(-90deg) translate(0vw, 0vh);
+        transform: scale(1.2) rotate(-90deg) translate(0vw, 0vh);
     }
     
     .pos5 {
-        transform: scale(1) rotate(-90deg) translate(0vw, 0vh);
+        transform: scale(1.2) rotate(-90deg) translate(0vw, 0vh);
     }
 
     .pos6 {
-        transform: scale(1) rotate(-90deg) translate(0vw, 0vh);
+        transform: scale(1.2) rotate(-90deg) translate(0vw, 0vh);
     }
 
     .pos7 {

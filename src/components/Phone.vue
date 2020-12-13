@@ -32,6 +32,50 @@ export default {
 
 <style lang="scss" scoped>
 
+.inner-rotatable {
+    //background: yellow;
+    transform: rotate(90deg);
+    color: black;
+
+    h1 {
+        color: white;
+    }
+
+    .card-container {
+        display: flex;
+    }
+
+    .card {
+        border-radius: 24px;
+        margin-top: 64px;
+        color: white;
+    }
+
+    .card-left {
+        margin-right: 8px;
+        background: rgba(white, 0.2);
+        height: 420px;
+        width: 530px;
+    }
+
+    .card-right {
+        margin-left: 8px;
+        background: rgba(white, 0.2);
+        height: 420px;
+        width: 530px;
+    }
+}
+
+.inner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
 .phone {
 	display: flex;
 	justify-content: center;
@@ -56,7 +100,7 @@ export default {
 
 .screen {
     width: 515px;
-    height: 1110px;
+    height: 1105px;
 	border-radius: 45px;
 	background-position: center;
 	background-size: contain;
@@ -78,7 +122,23 @@ export default {
 }
 
 .screen2 {
-	background-image: url("../assets/social-media/instagram/full/full-ateam2.png");
+	background-image: url("../assets/social-media/instagram/full/full-obliphica2.png");
+}
+
+.screen3 {
+	background-image: url("../assets/social-media/instagram/comments/comment2.png");
+}
+
+.screen4 {
+	background-image: url("../assets/social-media/benchmarking.png");
+}
+
+.screen5 {
+	background-image: url("../assets/social-media/pricing.png");
+}
+
+.screen6 {
+	background-image: url("../assets/social-media/addons.png");
 }
 
 // ---------- alt1 ----------
@@ -175,11 +235,6 @@ export default {
     background-image: url("../assets/social-media/instagram/comments/comment1.png");
 }
 
-
 // ---------- end of alt ----------
-
-.screen3 {
-	background-image: url("../assets/social-media/instagram/comments/comment2.png");
-}
 
 </style>
