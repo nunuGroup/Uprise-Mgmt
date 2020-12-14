@@ -880,7 +880,7 @@ export default {
 }
 
 .hoverable {
-  cursor: pointer;
+  //cursor: pointer;
 }
 
 .project-text {

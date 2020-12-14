@@ -45,6 +45,7 @@ export default {
     a {
         text-decoration: none;
         color: white;
+        cursor: none;
     }
 
     li {
@@ -53,8 +54,8 @@ export default {
         height: 0px;
 
         &:hover {
-            opacity: 0.5;
-            background: rgba(black, 0.5);
+            opacity: 0.8;
+            //background: rgba(black, 0.5);
         }
     }
 }

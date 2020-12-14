@@ -231,7 +231,7 @@ html {
 
 .loading-veil {
   //display: none;
-  background: #222;
+  background: #000;
   opacity: 1;
   width: 100%;
   height: 100vh;
@@ -262,7 +262,7 @@ html {
 body {
   padding: 0px;
   margin: 0px;
-  //cursor: none;
+  cursor: none !important;
 }
 
 p {
@@ -282,6 +282,7 @@ p {
 
 .g-cursor {
   position: absolute;
+  //z-index: 9999;
 
     &_hide {
       opacity: 0;
@@ -301,29 +302,32 @@ p {
       position: fixed;
       width: 36px;
       height: 36px;
-      border: 2px solid rgba(white, 1);
-      mix-blend-mode: difference;
-      //background: rgba(white,0.3);
+      //border: 2px solid rgba(white, 1);
+      //mix-blend-mode: difference;
+      //background: rgba(white,1);
       border-radius: 100%;
       z-index: 5555;
       backface-visibility: hidden;
       transition: 
-        margin 0.6s ease,
-        opacity 0.6s ease,
-        width 0.6s ease,
-        height 0.6s ease,
+        margin 0.2s ease,
+        opacity 0.2s ease,
+        width 0.2s ease,
+        height 0.2s ease,
     }
 
     &__point {
       top: 0;
       left: 0;
-      opacity: 0;
+      opacity: 1;
       position: fixed;
-      width: 10px;
-      height: 10px;
+      width: 32px;
+      height: 32px;
       pointer-events: none;
       user-select: none;
+      margin-left: -16px;
+      margin-top: -16px;
       border-radius: 100%;
+      mix-blend-mode: difference;
       background: #fff;
       z-index: 55555555;
       backface-visibility: hidden;
@@ -337,14 +341,14 @@ p {
 
     &_hover {
       .g-cursor__point {
-          opacity: 0;
-          width: 64px;
-          height: 64px;
-          margin-left: -24px;
-          margin-top: -24px;
+          opacity: 1;
+          width: 72px;
+          height: 72px;
+          margin-left: -36px;
+          margin-top: -36px;
           border: 2px solid rgba(white, 1);
           //background: white;
-          //mix-blend-mode: difference;
+          mix-blend-mode: difference;
           //background: rgba(white, 1);
           //border-color: white;
           transition: 
@@ -399,6 +403,10 @@ p {
      display: none !important;
    }
 
+   .fp-slidesNav ul li a {
+     cursor: none !important;
+   }
+
    #fp-nav {
      position: absolute;
      margin: 0px !important;
@@ -406,14 +414,17 @@ p {
      top: 0px !important;
      left: 180px !important;
      width: 12px;
+     cursor: none !important;
 
      li {
        margin-bottom: 18px !important;
+       cursor: none !important;
 
        a.active {
          width: 8px !important;
          height: 8px !important;
          margin: 0px 0 0 0px !important;
+         cursor: none !important;
        }
      }
    }

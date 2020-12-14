@@ -301,7 +301,7 @@ export default {
   width: 2641px;
   position: absolute;
   left: 0px;
-  z-index: 999;
+  z-index: 99;
   bottom: 472px;  
   transition: 2s $ezpz;
   transform: scale(1.8) translateY(-40px);
@@ -581,7 +581,7 @@ export default {
 }
 
 .hoverable {
-  cursor: pointer;
+  //cursor: pointer;
 }
 
 .project-text {
