@@ -2,11 +2,11 @@
   <div class="navbar-container">
     <ul>
         <router-link to="/"><li class="nav-item hoverable">Home</li></router-link>
-        <router-link to="/"><li class="nav-item hoverable">About</li></router-link>
-        <router-link to="/"><li class="nav-item hoverable">Services</li></router-link>
+        <router-link to="/#about"><li class="nav-item hoverable">About</li></router-link>
+        <router-link to="/#services"><li class="nav-item hoverable">Services</li></router-link>
         <router-link to="/social_media_management"><li class="nav-item hoverable">Social Media Management</li></router-link>
-        <router-link to="/"><li class="nav-item hoverable">Case Studies</li></router-link>
-        <router-link to="/"><li class="nav-item hoverable">Contact</li></router-link>
+        <router-link to="/#case_studies"><li class="nav-item hoverable">Case Studies</li></router-link>
+        <router-link to="/#contact"><li class="nav-item hoverable">Contact</li></router-link>
     </ul>
   </div>
 </template>
@@ -20,6 +20,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.router-link-exact-active li {
+    //background: red !important;
+    opacity: 1 !important;
+}
 
 .navbar-container {
     //background: rgba(orange, 0.2);
@@ -54,9 +59,11 @@ export default {
         padding-right: 16px;
         padding-left: 16px;
         height: 0px;
+        opacity: 0.2;
+        transition: 200ms;
 
         &:hover {
-            opacity: 0.8;
+            opacity: 1;
             //background: rgba(black, 0.5);
         }
     }
