@@ -359,18 +359,50 @@ export default {
       <!-- Section 5 w slides -->
       <section class="section">
         <div class="slide">
-          <div class="page-container">
+          <div class="page-container" style="background:red">
             <div class="cs-content">
               <div class="left-content"></div>
               <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
             </div>
+            <div class="bottom-actions">
+              <div @click="moveLeft()" class="hoverable nav-button prev" style="opacity: 0; pointer-events: none">Back</div>
+              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study</div>
+            </div>
           </div>       
         </div>
         <div class="slide">
-          <div class="page-container">
+          <div class="page-container" style="background:orange">
             <div class="cs-content">
               <div class="left-content"></div>
               <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
+            </div>
+            <div class="bottom-actions">
+              <div @click="moveLeft()" class="hoverable nav-button prev">Back</div>
+              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study</div>
+            </div>
+          </div>      
+        </div>
+        <div class="slide">
+          <div class="page-container" style="background:maroon">
+            <div class="cs-content">
+              <div class="left-content"></div>
+              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
+            </div>
+            <div class="bottom-actions">
+              <div @click="moveLeft()" class="hoverable nav-button prev">Back</div>
+              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study</div>
+            </div>
+          </div>      
+        </div>
+        <div class="slide">
+          <div class="page-container" style="background:purple">
+            <div class="cs-content">
+              <div class="left-content"></div>
+              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
+            </div>
+            <div class="bottom-actions">
+              <div @click="moveLeft()" class="hoverable nav-button prev">Back</div>
+              <div @click="moveLeft()" class="hoverable nav-button next" style="opacity: 0; pointer-events: none">Next Case Study</div>
             </div>
           </div>      
         </div>
@@ -425,7 +457,7 @@ export default {
 .right-content {
   background: black;
   height: 100vh;
-  width: 100%;
+  width: 175%;
   transition: 4s;
 }
 
@@ -757,21 +789,32 @@ export default {
   bottom: 0px;
   z-index: 9999;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   //background: gray;
   color: white;
   height: 100px;
   width: 100vw;
 
+  .prev {
+    margin-left: 32px;
+  }
+
+  .next {
+    margin-right: 32px;
+    background: white !important;
+    color: black;
+    font-weight: bold;
+  }
+
   .nav-button {
     background: black;
     height: 40px;
     width: max-content;
     padding: 6px 24px;
-    margin-right: 36px;
+    //margin-right: 36px;
     line-height: 40px;
-    border-radius: $rad;
+    border-radius: 12px;
     transition: $quick;
 
     &:hover {

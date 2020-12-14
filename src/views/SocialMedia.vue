@@ -332,7 +332,7 @@ export default {
   top: 200px;
   z-index: 1;
   opacity: 0.2;
-  animation: sm-stroke-head-move linear 90s forwards infinite;
+  animation: sm-stroke-head-move linear 130s forwards infinite;
 }
 
 .fade-enter-active, .fade-leave-active {
