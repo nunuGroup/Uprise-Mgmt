@@ -56,6 +56,12 @@ $quick: 200ms;
   }
 }
 
+@keyframes sm-stroke-head-move {
+  to {
+    background-position-x: -6084px;
+  }
+}
+
 @keyframes main-phone-enter {
   to {
     transform: scale(0.9) translate(-30vw, 35vh);

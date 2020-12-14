@@ -322,13 +322,17 @@ export default {
 @import '../assets/styles/global';
 
 .stroke-head {
-  background: red;
-  height: 144px;
-  width: 3304px;
+  background-image: url('../assets/sm-stroke-head.svg');
+  background-repeat: repeat-x;
+  background-size: cover;
+  height: 270px;
+  width: 6084px;
   position: fixed;
   left: 0px;
-  top: 400px;
+  top: 200px;
   z-index: 1;
+  opacity: 0.2;
+  animation: sm-stroke-head-move linear 90s forwards infinite;
 }
 
 .fade-enter-active, .fade-leave-active {
