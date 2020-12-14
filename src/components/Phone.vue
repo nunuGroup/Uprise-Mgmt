@@ -1,21 +1,9 @@
 <template>
     <div class="phone">
         <div class="screen" :class="( alt1 ? 'alt1-'+contentIndex : ( alt2 ? 'alt2-'+contentIndex : 'screen'+contentIndex) )">
-            <div v-if="contentIndex == 7" class="content-inner">
-                <div class="app-top top-motobb"></div>
-                <div class="app-content content-motobb"></div>
-            </div>
-            <div v-if="contentIndex == 8" class="content-inner">
-                <div class="app-top top-motolifestyle"></div>
-                <div class="app-content content-motolifestyle"></div>
-            </div>
-            <div v-if="contentIndex == 9" class="content-inner">
-                <div class="app-top top-obliphica"></div>
-                <div class="app-content content-obliphica"></div>
-            </div>
-            <div v-if="contentIndex == 10" class="content-inner">
-                <div class="app-top top-ateam"></div>
-                <div class="app-content content-ateam"></div>
+            <div class="content-inner">
+                <div class="app-top" :class="( contentIndex == 7 ? 'top-motobb' : ( contentIndex == 8 ? 'top-motolifestyle' : ( contentIndex == 9 ? 'top-obliphica' : ( contentIndex == 10 ? 'top-ateam' : 'gone') ) ) )"></div>
+                <div class="app-content" :class="( contentIndex == 7 ? 'content-motobb' : ( contentIndex == 8 ? 'content-motolifestyle' : ( contentIndex == 9 ? 'content-obliphica' : ( contentIndex == 10 ? 'content-ateam' : 'gone') ) ) )"></div>
             </div>
         </div>
 	</div>
@@ -50,11 +38,14 @@ export default {
 <style lang="scss" scoped>
 
 @keyframes scroll {
-    from {
-        background-position-y: 0px;
-    } to {
+    to {
         background-position-y: -862px;
     }
+}
+
+.gone {
+    background-image: url('../assets/social-media/instagram/crops/content_motobaby.png');
+    opacity: 0 !important;
 }
 
 .content-motobb {
@@ -74,12 +65,14 @@ export default {
 }
 
 .app-content {
+    opacity: 1;
+    transition: 2s;
     height: 362px;
     width: 100%;
     background-size: cover;
     background-repeat: repeat-y;
     animation: scroll 24s linear infinite;
-    transition: 1s;
+    //transition-delay: opacity 2s;
 }
 
 .app-top {
@@ -88,6 +81,8 @@ export default {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    //transition-delay: 2s;
+    //transition: 1s;
 }
 
 .top-motobb {
@@ -212,6 +207,22 @@ export default {
 }
 
 .screen6 {
+	background-image: url("../assets/social-media/addons.png");
+}
+
+.screen7 {
+	background-image: url("../assets/social-media/addons.png");
+}
+
+.screen8 {
+	background-image: url("../assets/social-media/addons.png");
+}
+
+.screen9 {
+	background-image: url("../assets/social-media/addons.png");
+}
+
+.screen10 {
 	background-image: url("../assets/social-media/addons.png");
 }
 
