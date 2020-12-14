@@ -27,7 +27,6 @@ export default {
         navigationTooltips: ['Home','About', 'Services', 'Social Media','Case Studies','Contact'],
         showActiveTooltip: true,
         easingcss3: 'cubic-bezier(0.65, 0, 0.35, 1)', //swoopy
-        anchors: ['home','about', 'services', 'social_media','case_studies','contact'],
         onLeave: (origin, destination, direction) => {
           this.handleLeave(origin, destination, direction);
         },

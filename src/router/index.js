@@ -31,7 +31,7 @@ router.beforeEach((to, from, next) => {
   store.commit('togglePane');
   setTimeout(() => {
     next();
-  }, 2000);
+  }, 1000);
 })
 
 export default router

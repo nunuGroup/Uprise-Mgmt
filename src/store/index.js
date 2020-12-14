@@ -19,7 +19,7 @@ export default new Vuex.Store({
       setTimeout(() => {
         state.globalTrans = false;
         console.log('transitioning?: ' + state.globalTrans);
-      }, 2000);
+      }, 1000);
     }
   },
   actions: {

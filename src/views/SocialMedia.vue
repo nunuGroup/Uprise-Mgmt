@@ -38,19 +38,6 @@ export default {
             'Case Study | aTeam'
         ],
         easingcss3: 'ease', //swoopy
-        anchors: [
-            'social_media_management',
-            'why_its_important', 
-            'creative_direction', 
-            'community_management',
-            'benchmarking_and_analysis',
-            'pricing',
-            'add-ons',
-            'case-study_motorola-baby',
-            'case-study_motorola-lifestyle',
-            'case-study_obliphica',
-            'case-study_ateam'
-        ],
         onLeave: (origin, destination, direction) => {
           this.handleLeave(origin, destination, direction);
         },

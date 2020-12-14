@@ -85,7 +85,7 @@ export default {
     <div :class="(unveil ? 'swoop' : '' )" class="logo-loader"></div>
     <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')"></div>
     <div class="transition-pane-container">
-      <div :class="( globalTrans ? 'pane-active' : 'pane-inactive' )" class="pane-out"></div>
+      <div :class="( globalTrans ? 'pane-active' : 'pane-inactive' )" class="pane"></div>
     </div>
     <div 
       :style="( editMode ? 'display:none' : 'display:block' )" 
@@ -117,19 +117,22 @@ html {
   .pane-active {
     height: 100vh;
     bottom: 0px;
+    transform: rotate(0deg) scale(4);
   }
 
   .pane-inactive {
     height: 0vh;
     top: 0px;
+    transform: scale(2);
   }
 
-  .pane-out {
-    background: white;
+  .pane {
+    background: #eee;
     width: 100%;
     position: absolute;
     bottom: 0px;
-    transition: 1s;
+    //transition: 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+    transition: 2s ease;
   }
 }
 
