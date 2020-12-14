@@ -216,75 +216,140 @@ export default {
       <!-- Section 3 -->
       <section class="section">
         <div class="page-container" style="background:white">
+          <div class="grid-container">
+          <h1 class="page-title">Services</h1>
           <div class="parent">
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div1">
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div1 hoverable">
               <div class="item-head"><div class="item-icon icon1"></div><h2>Strategic Consulting</h2></div>
-              <div class="bubble-list">
-                <div class="bubble-items">
-                  <span>Brand<span>_</span>Building</span>
-                  <span>Brand<span>_</span>Consulting</span>
-                  <span>Brand<span>_</span>Messaging</span>
-                  <span>Brand<span>_</span>Strategy</span>
-                  <span>Brand<span>_</span>Vision</span>
-                  <span>Content<span>_</span>Planning</span>
-                  <span>Creative<span>_</span>Direction</span>
-                  <span>Digital<span>_</span>Media<span>_</span>Planning</span>
-                  <span>Digital<span>_</span>Strategy</span>
-                  <span>Performance</span>
-                  <span>Marketing<span>_</span>Strategy</span>
-                  <span>Paid<span>_</span>Social<span>_</span>Strategy</span>
-                  <span>Print<span>_</span>+<span>_</span>OOH<span>_</span>Media<span>_</span>Planning</span>
-                  <span>Social<span>_</span>Media<span>_</span>Strategy</span>
-                  <span>Storytelling</span>
+                <div class="bubble-list">
+                  <div class="bubble-items">
+                    <span>Brand<span>-</span>Building</span>
+                    <span>Brand<span>-</span>Consulting</span>
+                    <span>Brand<span>-</span>Messaging</span>
+                    <span>Brand<span>-</span>Strategy</span>
+                    <span>Brand<span>-</span>Vision</span>
+                    <span>Content<span>-</span>Planning</span>
+                    <span>Creative<span>-</span>Direction</span>
+                    <span>Digital<span>-</span>Media<span>-</span>Planning</span>
+                    <span>Digital<span>-</span>Strategy</span>
+                    <span>Performance</span>
+                    <span>Marketing<span>-</span>Strategy</span>
+                    <span>Paid<span>-</span>Social<span>-</span>Strategy</span>
+                    <span>Print<span>-</span>+<span>-</span>OOH<span>-</span>Media<span>-</span>Planning</span>
+                    <span>Social<span>-</span>Media<span>-</span>Strategy</span>
+                    <span>Storytelling</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div2">
-              <div class="item-head"><div class="item-icon icon2"></div><h2>Branding</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div2 hoverable">
+                <div class="item-head"><div class="item-icon icon2"></div><h2>Branding</h2></div>
+                <div class="bubble-items">
+                  <span>Art<span>-</span>Direction</span>
+                  <span>Brand<span>-</span>Books<span>-</span>+<span>-</span>Guidelines</span>
+                  <span>Brand<span>-</span>Development</span>
+                  <span>Copy-writing</span>
+                  <span>Graphic<span>-</span>Design</span>
+                  <span>Logo<span>-</span>Design</span>
+                  <span>Name<span>-</span>+<span>-</span>Naming System</span>
+                  <span>Packaging<span>-</span>Design</span>
+                  <span>Storytelling</span>
+                  <span>Visual<span>-</span>Identity</span>
+                  <span>Vision</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div3">
-              <div class="item-head"><div class="item-icon icon3"></div><h2>Content Creation</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div3 hoverable">
+                <div class="item-head"><div class="item-icon icon3"></div><h2>Content Creation</h2></div>
+                <div class="bubble-items">
+                  <span>Advertising<span>-</span>+<span>-</span>Campaign</span>
+                  <span>Animation</span>
+                  <span>Concept<span>-</span>Development</span>
+                  <span>Creative<span>-</span>Direction</span>
+                  <span>Directing<span>-</span>+<span>-</span>Filming</span>
+                  <span>Editing<span>-</span>+<span>-</span>Post</span>
+                  <span>Global<span>-</span>Production<span>-</span>Services</span>
+                  <span>Illustration</span>
+                  <span>Photography</span>
+                  <span>Retouching</span>
+                  <span>Social<span>-</span>Media<span>-</span>Content</span>
+                  <span>Still<span>-</span>Life<span>-</span>+<span>-</span>Editorial</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div4">
-              <div class="item-head"><div class="item-icon icon4"></div><h2>Email</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div4 hoverable">
+                <div class="item-head"><div class="item-icon icon4"></div><h2>Email</h2></div>
+                <div class="bubble-items">
+                  <span>Email<span>-</span>Sourcing</span>
+                  <span>Email<span>-</span>Verification</span>
+                  <span>Creative<span>-</span>Email<span>-</span>Marketing</span>
+                  <span>Development<span>-</span>Support</span>
+                  <span>Email<span>-</span>Template<span>-</span>Creation</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div5">
-              <div class="item-head"><div class="item-icon icon5"></div><h2>Talent</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div5 hoverable">
+                <div class="item-head"><div class="item-icon icon5"></div><h2>Talent</h2></div>
+                <div class="bubble-items">
+                  <span>Calabrity<span>-</span>Seeding</span>
+                  <span>Infuencer<span>-</span>Gifting</span>
+                  <span>Infulencer<span>-</span>Partnerships</span>
+                  <span>Strategic<span>-</span>Collaborations</span>
+                  <span>Strategic<span>-</span>Partnerships</span>
+                  <span>Talent<span>-</span>Campaign Strategy</span>
+                  <span>Talent<span>-</span>Campaign<span>-</span>Global<span>-</span>Execution</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div6">
-              <div class="item-head"><div class="item-icon icon6"></div><h2>Public Relations</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div6 hoverable">
+                <div class="item-head"><div class="item-icon icon6"></div><h2>Public Relations</h2></div>
+                <div class="bubble-items">
+                  <span>Digital<span>-</span>+<span>-</span>Traditional Press</span>
+                  <span>Fashion<span>-</span>Shows</span>
+                  <span>Front<span>-</span>of<span>-</span>House</span>
+                  <span>Full-event<span>-</span>Production</span>
+                  <span>Openings</span>
+                  <span>Planning</span>
+                  <span>Presentations</span>
+                  <span>PR<span>-</span>Box<span>-</span>/<span>-</span>Mailers</span>
+                  <span>Product<span>-</span>Launches</span>
+                  <span>Top-tier<span>-</span>Editorial<span>-</span>Placement</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div7">
-              <div class="item-head"><div class="item-icon icon7"></div><h2>Social Media</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div7 hoverable">
+                <div class="item-head"><div class="item-icon icon7"></div><h2>Social Media</h2></div>
+                <div class="bubble-items">
+                  <span>Benchmarking<span>-</span>&<span>-</span>Analysis</span>
+                  <span>Brand<span>-</span>Social<span>-</span>Identity</span>
+                  <span>Community<span>-</span>Building</span>
+                  <span>Community<span>-</span>Management</span>
+                  <span>Social<span>-</span>Media<span>-</span>Growth<span>-</span>Giveaways</span>
+                  <span>Paid<span>-</span>Social<span>-</span>Framework</span>
+                  <span>Social<span>-</span>Aesthetic<span>-</span>Appeal</span>
+                  <span>Social<span>-</span>Media<span>-</span>Management</span>
+                  <span>Social<span>-</span>Media<span>-</span>Strategy</span>
+                  <span>Strategic<span>-</span>Alignment</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div8">
-              <div class="item-head"><div class="item-icon icon8"></div><h2>Spatial Design</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div8 hoverable">
+                <div class="item-head"><div class="item-icon icon8"></div><h2>Spatial Design</h2></div>
+                <div class="bubble-items">
+                  <span>3D<span>-</span>Rendering</span>
+                  <span>Custom<span>-</span>Wall<span>-</span>Graphics</span>
+                  <span>In-store<span>-</span>Displays</span>
+                  <span>Large<span>-</span>Space<span>-</span>Graphics</span>
+                  <span>Retail<span>-</span>Displays</span>
+                  <span>Special<span>-</span>Events<span>-</span>&<span>-</span>Booth<span>-</span>Design</span>
+                  <span>Vector<span>-</span>Graphics</span>
+                </div>
               </div>
-            </div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div9">
-              <div class="item-head"><div class="item-icon icon9"></div><h2>Additional Services</h2></div>
-              <div class="bubble-list">
-
+              <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div9 hoverable">
+                <div class="item-head"><div class="item-icon icon9"></div><h2>Additional Services</h2></div>
+                <div class="bubble-items">
+                  <span>Advisory<span>-</span>Board<span>-</span>Assembly</span>
+                  <span>Celebrity<span>-</span>Giveaways</span>
+                  <span>CMO<span>-</span>on<span>-</span>Demand</span>
+                  <span>Digital<span>-</span>Ads<span>-</span>Management</span>
+                  <span>Growth<span>-</span>Hacking</span>
+                  <span>Marketing<span>-</span>Advising</span>
+                  <span>SEO<span>-</span>-<span>-</span>SEM</span>
+                  <span>Social<span>-</span>Verification</span>
+                </div>
               </div>
             </div>
           </div>
@@ -332,6 +397,11 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.page-title {
+  color: black;
+  text-align: left;
+}
+
 .bubble-items {
   text-align: left;
   width: 80%;
@@ -339,8 +409,8 @@ export default {
 
   span {
     margin-right: 4px;
-    color: white;
-    background: black;
+    color: black;
+    background: #eee;
     padding: 4px 8px;
     line-height: 1;
     font-size: 12px;
@@ -351,7 +421,7 @@ export default {
     span {
       padding: 0px;
       margin: 0px;
-      color: black;
+      color: transparent;
     }
   }
 }
@@ -438,6 +508,10 @@ export default {
   //background: #eee !important;
   transition: 1s;
   border: solid black 2px;
+
+  &:hover {
+    //border-color: blue;
+  }
 }
 
 .parent {
