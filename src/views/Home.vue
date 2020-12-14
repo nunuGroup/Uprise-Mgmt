@@ -216,7 +216,17 @@ export default {
       <!-- Section 3 -->
       <section class="section">
         <div class="page-container" style="background:white">
-          <div class="bar1"></div>
+          <div class="parent">
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div1"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div2"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div3"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div4"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div5"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div6"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div7"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div8"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div9"></div>
+          </div>
         </div>
       </section>
 
@@ -260,6 +270,47 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.grid-item-stage {
+  opacity: 0;
+  transform: scale(0.85);
+  border-radius: 18px;
+  //height: 100%;
+  width: 100%;
+  //background: #e0e0e0 !important;
+  transition: 1s;
+  border: solid black 2px;
+}
+
+.grid-item {
+  opacity: 1;
+  transform: scale(1);
+  border-radius: 18px;
+  //height: 100%;
+  width: 100%;
+  //background: #eee !important;
+  transition: 1s;
+  border: solid black 2px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 18px;
+  height: 70vh;
+  width: 80vw;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 2 / 3 / 3 / 4; }
+.div5 { grid-area: 2 / 2 / 3 / 3; }
+.div6 { grid-area: 2 / 1 / 3 / 2; }
+.div7 { grid-area: 3 / 1 / 4 / 2; }
+.div8 { grid-area: 3 / 2 / 4 / 3; }
+.div9 { grid-area: 3 / 3 / 4 / 4; }
 
 .overview-text-container {
   text-align: left;
@@ -724,9 +775,9 @@ export default {
 
 //grid flyin animation
 .grid-item {
-  background: #555;
+  //background: #555;
   height: 250px;
-  transition: 1.2s;
+  transition: 1.5s;
 
   &:hover {
     //transform: scale(0.95);
@@ -746,7 +797,7 @@ export default {
   }
 
   &:nth-child(4) {
-    transition-delay: 1.6s;  
+    transition-delay: 1.2s;  
   }
 
   &:nth-child(5) {
@@ -754,7 +805,7 @@ export default {
   }
 
   &:nth-child(6) {
-    transition-delay: 1.2s;  
+    transition-delay: 1.6s;  
   }
 
   &:nth-child(7) {
