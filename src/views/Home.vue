@@ -359,10 +359,14 @@ export default {
       <!-- Section 5 w slides -->
       <section class="section">
         <div class="slide">
-          <div class="page-container" style="background:red">
+          <div class="page-container" style="background:red"><!-- UNDERCOVER LYFT -->
             <div class="cs-content">
               <div class="left-content"></div>
-              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
+              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )" class="lyft-things">
+                <video loop muted autoplay data-autoplay data-keepplaying id="lyft-vid">
+                  <source src="../assets/lyft/undercover_lyft_1080.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
             <div class="bottom-actions">
               <div @click="moveLeft()" class="hoverable nav-button prev" style="opacity: 0; pointer-events: none">Back</div>
@@ -424,6 +428,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+video {
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    transform: translate(-20%, 0%); /* % of current element */
+}
+
+.lyft-things {
+  overflow: hidden;
+}
 
 .page-contact {
   justify-content: flex-start !important;
