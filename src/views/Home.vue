@@ -161,9 +161,8 @@ export default {
 
     <div class="backdrop-container">
       <!--canvas id="glscreen"></canvas-->
+          <div :class="( activeSection == 0 ? 'tagline1' : ( activeSection == 1 ? 'tagline2' : 'tagline-gone' ) )" class="tagline"></div>
     </div>
-
-    <div :class="( activeSection == 0 ? 'tagline1' : ( activeSection == 1 ? 'tagline2' : 'tagline-gone' ) )" class="tagline"></div>
 
     <!-- social media buttons -->
     <div class="soc-container">
@@ -202,8 +201,14 @@ export default {
       
       <!-- Section 2 -->
       <section class="section">
-        <div class="page-container" style="background:white">
-          <div class="bar2"></div>
+        <div class="page-container sec2">
+          <div class="bar1">
+            <div class="overview-text-container">
+              <h1>Overview</h1>
+              <p>UPRISE Management is a 360 ̊  full service marketing, branding and creative agency for luxury, premium and digital brands as well as for leading e-commerce giants. UPRISE’s experience is broad; specializing in beauty, tech, food & spirits, lifestyle and hospitality. In this digital era, we deliver strategy-driven branding, high profile celebrity sourcing, forward-thinking creative marketing and visually rich solutions - all in conjunction with integrated media photography, video and global from-start-to-finish production services.</p>
+              <p>Our team has worked with---</p>
+            </div>
+          </div>
           <div class="logo-line"></div>
         </div>
       </section>
@@ -256,8 +261,12 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
-.tagline {
-
+.overview-text-container {
+  text-align: left;
+  width: 700px;
+  margin-left: 120px;
+  line-height: 2;
+  margin-top: -390px;
 }
 
 .tagline-gone {
@@ -285,7 +294,7 @@ export default {
   width: 2641px;
   position: absolute;
   left: 0px;
-  z-index: 0;
+  z-index: 9;
   margin: auto;
   bottom: 24px;
   transition: 2s $ezpz;
@@ -301,7 +310,7 @@ export default {
   width: 2641px;
   position: absolute;
   left: 0px;
-  z-index: 99;
+  z-index: 9;
   bottom: 472px;  
   transition: 2s $ezpz;
   transform: scale(1.8) translateY(-40px);
@@ -331,12 +340,15 @@ export default {
     position: absolute;
     top: 0px;
     margin-top: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .bar1 {
-    background:black;
+    background:white;
     width: 100%;
-    height: 507px;
+    height: 450px;
     z-index: 0;
     position: absolute;
     bottom: 0px;

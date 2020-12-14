@@ -311,7 +311,7 @@ export default {
               <div class="bar1 c4"><div class="cs-logo cs4"></div></div>
             </div>
         </section>
-
+            <div class="stroke-head"></div>
     </full-page>
   </div>
 
@@ -320,6 +320,16 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.stroke-head {
+  background: red;
+  height: 144px;
+  width: 3304px;
+  position: fixed;
+  left: 0px;
+  top: 400px;
+  z-index: 1;
+}
 
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s

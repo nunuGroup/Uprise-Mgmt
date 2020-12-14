@@ -56,6 +56,13 @@ $quick: 200ms;
   }
 }
 
+@keyframes main-phone-enter {
+  to {
+    transform: scale(0.9) translate(-30vw, 35vh);
+    opacity: 1;
+  }
+}
+
 // ---------- staging ----------
 
 .enter {
