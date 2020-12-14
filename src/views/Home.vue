@@ -272,7 +272,7 @@ export default {
   z-index: 999;
   bottom: 372px;  
   transition: 2s $ezpz;
-  transform: translateY(-100vh);
+  transform: translateY(-110vh);
   animation: move-tagline1 50s linear forwards infinite;
 }
 
@@ -302,7 +302,7 @@ export default {
   position: absolute;
   left: 0px;
   z-index: 999;
-  bottom: 372px;  
+  bottom: 472px;  
   transition: 2s $ezpz;
   transform: scale(1.8) translateY(-40px);
   animation: move-tagline1 50s linear forwards infinite;
@@ -317,6 +317,7 @@ export default {
   right: 0px;
   left: 0px;
   bottom: 0px;
+  margin-bottom: 60px;
   background-image: url('../assets/logo-line.png');
   background-size: 100%;
   background-repeat: repeat-x;
@@ -325,7 +326,7 @@ export default {
 .bar2 {
     background:black;
     width: 100%;
-    height: 750px;
+    height: 650px;
     z-index: 0;
     position: absolute;
     top: 0px;
