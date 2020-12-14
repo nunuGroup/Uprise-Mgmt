@@ -215,7 +215,7 @@ export default {
 
       <!-- Section 3 -->
       <section class="section">
-        <div class="page-container" style="background:white">
+        <div class="page-container service-section" style="background:white">
           <div class="grid-container">
           <h1 :class="( activeSection == 2 ? 'enter-text' : 'stage-default' )" class="page-title">Services</h1>
           <div class="parent">
@@ -361,7 +361,13 @@ export default {
         <div class="slide">
           <div class="page-container" style="background:red"><!-- UNDERCOVER LYFT -->
             <div class="cs-content">
-              <div class="left-content"></div>
+              <div class="left-content" style="background: black">
+                <div :class="( activeSection == 3 ? 'enter' : 'stage-default' )" class="case-logo lyft-logo"></div>
+                <div :class="( activeSection == 3 ? 'enter' : 'stage-default' )" class="text-case">
+                  <p>Generated over <strong>100,000 new users</strong> taking their first ride in a matter of 6 months, and countless more downloads and sign ups</p>
+                  <p>UPRISE was brought on to the influencer and celebrity campaign for Lyft. Activating top influencers (<strong>TheGabbieShow, Coby Persin, Jon Paul Piques amongst others</strong>) as well as bringing celebrities to the table such as Sean “Diddy” Combs to create exclusive activations. Additionally, UPRISE generated red carpet event placements for Lyft to allow for additional press.</p>
+                </div>
+              </div>
               <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )" class="lyft-things">
                 <video loop muted autoplay data-autoplay data-keepplaying id="lyft-vid">
                   <source src="../assets/lyft/undercover_lyft_1080.mp4" type="video/mp4">
@@ -377,12 +383,26 @@ export default {
         <div class="slide">
           <div class="page-container" style="background:orange">
             <div class="cs-content">
-              <div class="left-content"></div>
-              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
+              <div class="left-content" style="background: black">
+                <div class="case-logo superscreen-logo"></div>
+                <div class="text-case">
+                  <p>UPRISE secured all marketing talent for the campaign, as well as worked with Kickstarter Live to en- sure a live stream during the campaign hosted by top tech blogger <strong>TechnoBuffalo.</strong></p>
+                  <p>Instead of zooming in, Super-Screen Aspect fits the content on your mobile screen so nothing gets blurry or cropped, so text and icons appear at exactly the same size as on your phone. Supercharg- ing your phone’s OS with the convenience of a 10” HD display.</p>
+                  <p><strong>Most funded Kickstarter campaign of all time</strong></p>
+                  <p><strong>50K</strong> goal in 30 minutes</p>
+                  <p><strong>Over 20K pledges</strong></p>
+                  <p><strong>Over $2.5 million</strong> raised in 30 days</p>
+                </div>
+              </div>
+              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )" class="superscreen-things">
+                <video loop muted autoplay data-autoplay data-keepplaying id="lyft-vid">
+                  <source src="../assets/superscreen/superscreen.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
             <div class="bottom-actions">
-              <div @click="moveLeft()" class="hoverable nav-button prev">Back</div>
-              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study</div>
+              <div @click="moveLeft()" class="hoverable nav-button prev">🡠 Back</div>
+              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study 🡢</div>
             </div>
           </div>      
         </div>
@@ -393,8 +413,8 @@ export default {
               <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
             </div>
             <div class="bottom-actions">
-              <div @click="moveLeft()" class="hoverable nav-button prev">Back</div>
-              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study</div>
+              <div @click="moveLeft()" class="hoverable nav-button prev">🡠 Back</div>
+              <div @click="moveRight()" class="hoverable nav-button next">Next Case Study 🡢</div>
             </div>
           </div>      
         </div>
@@ -405,8 +425,8 @@ export default {
               <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
             </div>
             <div class="bottom-actions">
-              <div @click="moveLeft()" class="hoverable nav-button prev">Back</div>
-              <div @click="moveLeft()" class="hoverable nav-button next" style="opacity: 0; pointer-events: none">Next Case Study</div>
+              <div @click="moveLeft()" class="hoverable nav-button prev">🡠 Back</div>
+              <div @click="moveLeft()" class="hoverable nav-button next" style="opacity: 0; pointer-events: none">Next Case Study 🡢</div>
             </div>
           </div>      
         </div>
@@ -429,6 +449,43 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.obliphica-things {
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-image: url('../assets/obliphica/collage.png');
+}
+
+.superscreen-logo {
+  background-image: url('../assets/superscreen/logo.png');
+  height: 60px;
+  width: 270px;
+}
+
+.lyft-logo {
+  background-image: url('../assets/lyft/logo.svg');
+  height: 100px;
+  width: 200px;
+}
+
+.case-logo {
+  margin-right: auto;
+  margin-left: 100px;
+  margin-bottom: 48px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.text-case {
+  margin-left: 0px;
+  width: 410px;
+  line-height: 2;;
+}
+
+.service-section {
+  margin-top: -1px !important;
+}
+
 video {
     height: 100%;
     width: 177.77777778vh; /* 100 * 16 / 9 */
@@ -437,7 +494,7 @@ video {
     transform: translate(-20%, 0%); /* % of current element */
 }
 
-.lyft-things {
+.lyft-things, .superscreen-things {
   overflow: hidden;
 }
 
@@ -467,7 +524,12 @@ video {
   height: 100vh;
   width: 100%;
   transition: 4s;
-  margin-top: -1px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  //margin-top: -1px;
 }
 
 .right-content {

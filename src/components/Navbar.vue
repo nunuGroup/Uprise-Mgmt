@@ -24,6 +24,7 @@ export default {
 .router-link-exact-active li {
     //background: red !important;
     opacity: 1 !important;
+    //font-weight: bold !important;
 }
 
 .navbar-container {
@@ -59,8 +60,9 @@ export default {
         padding-right: 16px;
         padding-left: 16px;
         height: 0px;
-        opacity: 0.2;
+        opacity: 0.3;
         transition: 200ms;
+        font-weight: normal;
 
         &:hover {
             opacity: 1;
