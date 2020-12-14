@@ -258,9 +258,9 @@ export default {
 
 .tagline-gone {
   opacity: 0;
-  background: red;
-  height: 490px;
-  width: 5880px;
+  background-image: url('../assets/design-create-inspire-big.svg');
+  height: 250px;
+  width: 4401px;
   position: absolute;
   left: 0px;
   z-index: 999;
@@ -271,25 +271,30 @@ export default {
 
 .tagline1 {
   opacity: 1;
-  background: red;
-  height: 234px;
-  width: 5880px;
+  background-image: url('../assets/design-create-inspire-big.svg');
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 150px;
+  width: 2641px;
   position: absolute;
   left: 0px;
   z-index: 0;
-  bottom: 0px;
+  margin: auto;
+  bottom: 24px;
   transition: 2s $ezpz;
 }
 
 .tagline2 {
   opacity: 1;
-  background: red;
-  height: 490px;
-  width: 5880px;
+  background-image: url('../assets/design-create-inspire-big.svg');
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 250px;
+  width: 4401px;
   position: absolute;
   left: 0px;
   z-index: 999;
-  bottom: 342px;  
+  bottom: 372px;  
   transition: 2s $ezpz;
 }
 
