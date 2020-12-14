@@ -45,6 +45,8 @@ export default {
     a {
         text-decoration: none;
         color: white;
+        font-family: 'Gotham', Helvetica, Arial, sans-serif;
+        font-weight: normal;
         cursor: none;
     }
 

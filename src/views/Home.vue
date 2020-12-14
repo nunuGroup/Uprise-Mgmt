@@ -217,15 +217,96 @@ export default {
       <section class="section">
         <div class="page-container" style="background:white">
           <div class="parent">
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div1"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div2"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div3"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div4"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div5"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div6"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div7"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div8"></div>
-            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div9"></div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div1">
+              <div class="item-head"><div class="item-icon icon1"></div><h2>Strategic Consulting</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div2">
+              <div class="item-head"><div class="item-icon icon2"></div><h2>Branding</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div3">
+              <div class="item-head"><div class="item-icon icon3"></div><h2>Content Creation</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div4">
+              <div class="item-head"><div class="item-icon icon4"></div><h2>Email</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div5">
+              <div class="item-head"><div class="item-icon icon5"></div><h2>Talent</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div6">
+              <div class="item-head"><div class="item-icon icon6"></div><h2>Public Relations</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div7">
+              <div class="item-head"><div class="item-icon icon7"></div><h2>Social Media</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div8">
+              <div class="item-head"><div class="item-icon icon8"></div><h2>Spatial Design</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
+            <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div9">
+              <div class="item-head"><div class="item-icon icon9"></div><h2>Additional Services</h2></div>
+              <div class="bubble-list">
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+                <div class="bubble-item"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -271,7 +352,28 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.item-head {
+  display: flex;
+  line-height: 51px;
+
+  h2 {
+    font-size: 18px;
+    margin-left: 12px;
+    font-weight: normal;
+  }
+}
+
+.item-icon {
+  background: black;
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
 .grid-item-stage {
+  color: black;
   opacity: 0;
   transform: scale(0.85);
   border-radius: 18px;
@@ -283,6 +385,7 @@ export default {
 }
 
 .grid-item {
+  color: black;
   opacity: 1;
   transform: scale(1);
   border-radius: 18px;
