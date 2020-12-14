@@ -203,7 +203,7 @@ export default {
       <section class="section">
         <div class="page-container sec2">
           <div class="bar1">
-            <div class="overview-text-container">
+            <div :class="( activeSection == 1 ? 'enter-text' : 'stage-default' )" class="overview-text-container">
               <h1>Overview</h1>
               <p>UPRISE Management is a 360 ̊  full service marketing, branding and creative agency for luxury, premium and digital brands as well as for leading e-commerce giants. UPRISE’s experience is broad; specializing in beauty, tech, food & spirits, lifestyle and hospitality. In this digital era, we deliver strategy-driven branding, high profile celebrity sourcing, forward-thinking creative marketing and visually rich solutions - all in conjunction with integrated media photography, video and global from-start-to-finish production services.</p>
               <p>Our team has worked with---</p>
@@ -217,7 +217,7 @@ export default {
       <section class="section">
         <div class="page-container" style="background:white">
           <div class="grid-container">
-          <h1 class="page-title">Services</h1>
+          <h1 :class="( activeSection == 2 ? 'enter-text' : 'stage-default' )" class="page-title">Services</h1>
           <div class="parent">
             <div :class="( activeSection == 2 ? 'grid-item' : 'grid-item-stage' )" class="div1 hoverable">
               <div class="item-head"><div class="item-icon icon1"></div><h2>Strategic Consulting</h2></div>
@@ -356,37 +356,33 @@ export default {
         </div>
       </section>
 
-      <!-- Section 4 -->
-      <section class="section">
-        <div class="page-container">
-          <p>sample content 3</p>
-        </div>
-      </section>
-
       <!-- Section 5 w slides -->
       <section class="section">
         <div class="slide">
           <div class="page-container">
-            slide example 1
-            <div class="bottom-actions">
-              <div @click="moveRight()" class="hoverable nav-button next">Next</div>
+            <div class="cs-content">
+              <div class="left-content"></div>
+              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
             </div>
-          </div>        
+          </div>       
         </div>
         <div class="slide">
           <div class="page-container">
-            slide example 2
-            <div class="bottom-actions">
-              <div @click="moveLeft()" class="hoverable nav-button prev">Prev</div>
+            <div class="cs-content">
+              <div class="left-content"></div>
+              <div :class="( activeSection == 3 ? 'right-content' : 'content-inactive' )"></div>
             </div>
-          </div>        
+          </div>      
         </div>
       </section>
 
-      <!-- Section 6 -->
-      <section style="background: pink" class="section">
-        <div class="page-container">
-          contact information
+      <section style="background: black" class="section">
+        <div class="page-container page-contact">
+          <div class="contact-container">
+            <p :class="( activeSection == 4 ? 'enter-text' : 'stage-default' )">UPRISE MANAGEMENT</p>
+            <p>2317 Mount Olympus Dr, Los Angeles, California 90046</p>
+            <p>info@uprisemgmt.com</p>
+          </div>
         </div>
       </section>
 
@@ -396,6 +392,49 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.page-contact {
+  justify-content: flex-start !important;
+  align-items: flex-end !important;
+}
+
+.contact-container {
+  text-align:left;
+  color: white;
+  z-index: 999;
+  margin-bottom: 64px;
+  margin-left: 92px;
+  font-weight: normal !important;
+  font-size: 24px !important;
+}
+
+.cs-content {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-content {
+  background: white;
+  height: 100vh;
+  width: 100%;
+  transition: 4s;
+  margin-top: -1px;
+}
+
+.right-content {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  transition: 4s;
+}
+
+.content-inactive {
+  width: 0%;
+  height: 100vh;
+  background: black;
+  transition: 2s;
+}
 
 .page-title {
   color: black;

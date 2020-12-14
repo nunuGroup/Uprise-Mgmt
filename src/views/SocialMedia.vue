@@ -219,7 +219,7 @@ export default {
         <section class="section landing">
           <div class="page-container">
               <div class="bar1">
-                <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="head" id="head1">
+                <div :class="( activeSection == 0 ? 'enter-text' : 'stage-default' )" class="head" id="head1">
                   <h1 class="head head1">Social Media Management & Strategic Consulting</h1>
                 </div>
                 <div :class="( activeSection == 0 ? 'social-text-enter' : 'social-text-stage' )" class="main-text socialText1">
@@ -233,7 +233,7 @@ export default {
         <section class="section">
           <div class="page-container">
               <div class="bar2">
-                <h1 class="head head2">Social Media Management & Strategic Consulting</h1>
+                <h1 :class="( activeSection == 1 ? 'enter-text' : 'stage-default' )" class="head head2">Social Media Management & Strategic Consulting</h1>
                 <div class="main-text main2">
                   <h3>WHY IT'S IMPORTANT</h3>
                   <p>Whether you’re upgrading, revitalizing or starting from scratch, a strong social media strategy and presence is important.</p>
@@ -248,7 +248,7 @@ export default {
         <section class="section">
             <div class="page-container" style="background: white">
                 <div class="main-text main3">
-                  <h1 class="main-head">Creative Direction</h1>
+                  <h1 :class="( activeSection == 2 ? 'enter-text' : 'stage-default' )" class="main-head">Creative Direction</h1>
                   <h4>Strategic Alignment</h4>
                   <p>Your social media content strategy, tactics and every day programming should always align with with your business goals. Whether it’s brand awareness, customer engagement, website traffic, sales or retention (increased lifetime customer values), our team will help you meet your business objectives by aligning a content plan, within the relevant paid social framework, around your specific targets.</p><p>Brand identity is important, because it increases the likelihood that someone will land on your profile and choose to follow you, based on the look and feel of your content. Creating an appealing visual identity to your target audience, through social media, will elevate and expand your digital outreach, with the purpose of attracting more customers and growing your business.</p><p>Whether you’re just starting out or looking to rebrand, our team has many solutions, through years of experience in different industries, to help your business thrive.</p>
                   <h4>Paid Social Framework</h4>
@@ -261,7 +261,7 @@ export default {
         <section class="section">
             <div class="page-container">
                 <div class="main-text main4">
-                  <h1 class="main-head">Community Management</h1>
+                  <h1 :class="( activeSection == 3 ? 'enter-text' : 'stage-default' )" class="main-head">Community Management</h1>
                   <h4>Why it's Important</h4>
                   <p>Community management is a hybrid between the modern customer service rep and a social media specialist. It is critical to the success of a company’s social media program, because without it, a brand comes off cold, corporate and as if they simply don’t care.</p>
                   <h4>Daily Management</h4>

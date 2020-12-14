@@ -76,6 +76,12 @@ $quick: 200ms;
   transform: translate(0px, 0px);
 }
 
+.enter-text {
+  opacity: 1;
+  transition: 1.5s !important;
+  transition-delay: 1s !important;
+}
+
 .stage-left {
   opacity: 0 !important;
   transform: translate(-500px, 0px) scale(0.8);
@@ -106,6 +112,13 @@ $quick: 200ms;
   opacity: 0;
   transition: 1s;
   height: 250px;
+}
+
+.stage-default {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(-64px);
+  //transition-delay: 2s;
 }
 
 // ---------- social ----------
