@@ -163,7 +163,7 @@ export default {
       <!--canvas id="glscreen"></canvas-->
     </div>
 
-    <div :class="( activeSection == 0 ? 'tagline1' : ( activeSection == 1 ? 'tagline2' : 'tagline-gone' ) )"></div>
+    <div :class="( activeSection == 0 ? 'tagline1' : ( activeSection == 1 ? 'tagline2' : 'tagline-gone' ) )" class="tagline"></div>
 
     <!-- social media buttons -->
     <div class="soc-container">
@@ -256,17 +256,24 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.tagline {
+
+}
+
 .tagline-gone {
   opacity: 0;
   background-image: url('../assets/design-create-inspire-big.svg');
-  height: 250px;
-  width: 4401px;
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 150px;
+  width: 2641px;
   position: absolute;
   left: 0px;
   z-index: 999;
-  bottom: 342px;  
+  bottom: 372px;  
   transition: 2s $ezpz;
   transform: translateY(-100vh);
+  animation: move-tagline1 50s linear forwards infinite;
 }
 
 .tagline1 {
@@ -282,6 +289,7 @@ export default {
   margin: auto;
   bottom: 24px;
   transition: 2s $ezpz;
+  animation: move-tagline1 50s linear forwards infinite;
 }
 
 .tagline2 {
@@ -289,13 +297,15 @@ export default {
   background-image: url('../assets/design-create-inspire-big.svg');
   background-size: cover;
   background-repeat: repeat-x;
-  height: 250px;
-  width: 4401px;
+  height: 150px;
+  width: 2641px;
   position: absolute;
   left: 0px;
   z-index: 999;
   bottom: 372px;  
   transition: 2s $ezpz;
+  transform: scale(1.8) translateY(-40px);
+  animation: move-tagline1 50s linear forwards infinite;
 }
 
 .logo-line {

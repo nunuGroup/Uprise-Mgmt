@@ -50,6 +50,12 @@ $quick: 200ms;
   }
 }
 
+@keyframes move-tagline1 {
+  to {
+    background-position-x: -2641px;
+  }
+}
+
 // ---------- staging ----------
 
 .enter {
