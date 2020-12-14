@@ -5,11 +5,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    editMode: false
+    editMode: false,
+    globalTrans: false
   },
   mutations: {
     toggleEditMode(state) {
       state.editMode = !state.editMode;
+    },
+    togglePane(state) {
+      console.clear();
+      state.globalTrans = true;
+      console.log('transitioning?', state.globalTrans);
+      setTimeout(() => {
+        state.globalTrans = false;
+        console.log('transitioning?: ' + state.globalTrans);
+      }, 2000);
     }
   },
   actions: {

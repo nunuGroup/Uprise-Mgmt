@@ -26,8 +26,8 @@ export default {
 
     },
     mounted() {
-        console.log('phone mounted');
-        console.log('oboy', this.contentIndex);
+        //console.log('phone mounted');
+        //console.log('oboy', this.contentIndex);
     },
     methods: {
 

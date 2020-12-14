@@ -18,7 +18,7 @@ export default {
       options: {
         normalScrollElements: '.test-container, .modal-active, .modal-inactive, .more-work-grid, .more-work-container, .modal-images',
         loopHorizontal: false,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 2000,
         slidesNavigation: false,
         controlArrows: false,
         navigation: false,
@@ -201,15 +201,16 @@ export default {
       
       <!-- Section 2 -->
       <section class="section">
-        <div class="page-container">
-          <EditableText rel="section2text" align="center" width="500px" />
+        <div class="page-container" style="background:white">
+          <div class="bar2"></div>
+          <div class="logo-line"></div>
         </div>
       </section>
 
       <!-- Section 3 -->
       <section class="section">
-        <div class="page-container">
-          <p>sample content 2</p>
+        <div class="page-container" style="background:white">
+          <div class="bar1"></div>
         </div>
       </section>
 
@@ -253,6 +254,37 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/global';
+
+.logo-line {
+  background: red;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background-image: url('../assets/logo-line.png');
+  background-size: 100%;
+  background-repeat: repeat-x;
+}
+
+.bar2 {
+    background:black;
+    width: 100%;
+    height: 400px;
+    z-index: 9;
+    position: absolute;
+    top: 0px;
+    margin-top: -12px;
+}
+
+.bar1 {
+    background:black;
+    width: 100%;
+    height: 507px;
+    z-index: 9;
+    position: absolute;
+    bottom: 0px;
+}
 
 .sec2text {
 
@@ -324,7 +356,8 @@ export default {
   width: 100%;
   top: 0px;
   margin: 0px;
-  background-image: url("../assets/mission-bg.png");
+  //background-image: url("../assets/mission-bg.png");
+  background: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 

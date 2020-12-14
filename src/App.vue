@@ -28,6 +28,9 @@ export default {
     },
     cursorPoint() {
       return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`
+    },
+    globalTrans() {
+      return store.state.globalTrans;
     }
   },
   mounted() {
@@ -50,7 +53,6 @@ export default {
     handleNav(index) {
       console.clear();
       console.log(index);
-      console.log('ROUTE HOME');
       this.$refs.fullpage.api.moveTo(1);
     },
     moveCursor(e) {
@@ -59,7 +61,7 @@ export default {
       //console.log(e.target.classList);
 
       if(e.target.classList.contains('hoverable') || e.target.classList.contains('fp-tooltip') || e.target.tagName == "SPAN") {
-        console.log(e.target.tagName);
+        //console.log(e.target.tagName);
         //console.log('HOVERABLE:)');
         self.hover = true;
       } else {
@@ -81,7 +83,9 @@ export default {
 <template>
   <div id="app">
     <div :class="(unveil ? 'swoop' : '' )" class="logo-loader"></div>
-    <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')">
+    <div :class="(unveil ? 'loading-veil unveil' : 'loading-veil')"></div>
+    <div class="transition-pane-container">
+      <div :class="( globalTrans ? 'pane-active' : 'pane-inactive' )" class="pane-out"></div>
     </div>
     <div 
       :style="( editMode ? 'display:none' : 'display:block' )" 
@@ -98,6 +102,35 @@ export default {
 <style lang="scss">
 html {
   transition: filter 1s;
+}
+
+.transition-pane-container {
+  //background: red;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+  z-index: 999;
+  pointer-events: none;
+
+  .pane-active {
+    height: 100vh;
+    bottom: 0px;
+  }
+
+  .pane-inactive {
+    height: 0vh;
+    top: 0px;
+  }
+
+  .pane-out {
+    background: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    transition: 1s;
+  }
 }
 
 .slide-leave-active,

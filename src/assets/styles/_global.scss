@@ -30,6 +30,26 @@ $quick: 200ms;
     100% { transform: rotate(360deg); }
 }
 
+@keyframes bar-intro {
+  from {
+    height: 0px;
+  } to {
+    height: 507px;
+  }
+}
+
+@keyframes pane-out {;
+  to {
+    height: 100vh;
+  }
+}
+
+@keyframes pane-in {
+  to {
+    height: 100vh;
+  }
+}
+
 // ---------- staging ----------
 
 .enter {

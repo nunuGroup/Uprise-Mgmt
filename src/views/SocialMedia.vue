@@ -175,7 +175,7 @@ export default {
 </script>
 
 <template>
-<transition name="slide">
+<transition name="fade" mode="out-in">
 
   <div class="sm">
 
@@ -334,6 +334,13 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0
+}
+
 .cs1 {
   background-image: url('../assets/social-media/motobb.png');
 }
@@ -491,6 +498,7 @@ export default {
     z-index: 9;
     position: absolute;
     bottom: 0px;
+    //animation: bar-intro 2s $ezpz forwards;
 }
 
 .bar2 {
@@ -500,6 +508,7 @@ export default {
     z-index: 9;
     position: absolute;
     top: 0px;
+    margin-top: -12px;
 }
 
 .bar3 {

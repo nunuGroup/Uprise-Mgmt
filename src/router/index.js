@@ -24,4 +24,14 @@ const router = new VueRouter({
   routes
 })
 
+import store from '../store';
+
+router.beforeEach((to, from, next) => {
+  console.log('TRANSITIONING...');
+  store.commit('togglePane');
+  setTimeout(() => {
+    next();
+  }, 2000);
+})
+
 export default router

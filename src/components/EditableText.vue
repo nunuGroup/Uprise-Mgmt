@@ -15,7 +15,7 @@ export default {
     },
     mounted() {
         this.fetchText();
-        console.log('edit mode?: ', this.editMode);
+        //console.log('edit mode?: ', this.editMode);
     },
     computed: {
         editMode() {
@@ -26,9 +26,9 @@ export default {
         fetchText() {
             this.fireFetch("text", "rel == $rel", (docs) => {
                 docs.forEach((doc) => {
-                    console.log(doc.data());
+                   // console.log(doc.data());
                     this.text = doc.data().value;
-                    console.log(this.text);
+                    //console.log(this.text);
                 });
             });
         }
