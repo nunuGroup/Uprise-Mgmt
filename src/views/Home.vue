@@ -163,6 +163,8 @@ export default {
       <!--canvas id="glscreen"></canvas-->
     </div>
 
+    <div :class="( activeSection == 0 ? 'tagline1' : ( activeSection == 1 ? 'tagline2' : 'tagline-gone' ) )"></div>
+
     <!-- social media buttons -->
     <div class="soc-container">
       <a href="#" target="_blank"><div class="hoverable soc-button fb"></div></a>
@@ -254,11 +256,50 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
-.logo-line {
+.tagline-gone {
+  opacity: 0;
   background: red;
-  height: 80px;
-  width: 100%;
+  height: 490px;
+  width: 5880px;
   position: absolute;
+  left: 0px;
+  z-index: 999;
+  bottom: 342px;  
+  transition: 2s $ezpz;
+  transform: translateY(-100vh);
+}
+
+.tagline1 {
+  opacity: 1;
+  background: red;
+  height: 234px;
+  width: 5880px;
+  position: absolute;
+  left: 0px;
+  z-index: 0;
+  bottom: 0px;
+  transition: 2s $ezpz;
+}
+
+.tagline2 {
+  opacity: 1;
+  background: red;
+  height: 490px;
+  width: 5880px;
+  position: absolute;
+  left: 0px;
+  z-index: 999;
+  bottom: 342px;  
+  transition: 2s $ezpz;
+}
+
+.logo-line {
+  //background: red;
+  height: 317px;
+  width: 90%;
+  position: absolute;
+  margin: auto;
+  right: 0px;
   left: 0px;
   bottom: 0px;
   background-image: url('../assets/logo-line.png');
@@ -269,8 +310,8 @@ export default {
 .bar2 {
     background:black;
     width: 100%;
-    height: 400px;
-    z-index: 9;
+    height: 750px;
+    z-index: 0;
     position: absolute;
     top: 0px;
     margin-top: -12px;
@@ -280,7 +321,7 @@ export default {
     background:black;
     width: 100%;
     height: 507px;
-    z-index: 9;
+    z-index: 0;
     position: absolute;
     bottom: 0px;
 }
